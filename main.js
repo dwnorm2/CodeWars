@@ -85,3 +85,71 @@ let century = (year) => Math.ceil(year / 100);
 // [1, 2, 3] --> [2, 4, 6]
 
 let maps = (x) => x.map((y) => y * 2);
+
+// Convert number to reversed array of digits
+// Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example(Input => Output):
+// 35231 => [1,3,2,5,3]
+// 0 => [0]
+
+function digitize(n) {
+  return n.toString().split("").reverse().map(Number);
+}
+
+// Clock shows h hours, m minutes and s seconds after midnight.
+
+// Your task is to write a function which returns the time since midnight in milliseconds.
+
+// Example:
+// h = 0
+// m = 1
+// s = 1
+
+// result = 61000
+// Input constraints:
+
+// 0 <= h <= 23
+// 0 <= m <= 59
+// 0 <= s <= 59
+
+function past(h, m, s) {
+  return h * 3600000 + m * 60000 + s * 1000;
+}
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them.
+
+// It should look like this:
+
+// Sam Harris => S.H
+
+// patrick feeney => P.F
+
+function abbrevName(name) {
+  let arr = name.split(" ");
+  let firstName = arr[0].toUpperCase();
+  let lastName = arr[1].toUpperCase();
+  return `${firstName[0]}.${lastName[0]}`;
+}
+
+// Timmy & Sarah think they are in love, but around where they live, they will only know once they pick a flower each. If one of the flowers has an even number of petals and the other has an odd number of petals it means they are in love.
+
+// Write a function that will take the number of petals of each flower and return true if they are in love and false if they aren't.
+
+function lovefunc(flower1, flower2) {
+  if (
+    (flower1 % 2 === 0 && flower2 % 2 !== 0) ||
+    (flower2 % 2 === 0 && flower1 % 2 !== 0)
+  ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+
+let simpleMultiplication = (number) =>
+  number % 2 === 0 ? number * 8 : number * 9;
