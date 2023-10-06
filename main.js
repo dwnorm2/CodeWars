@@ -241,3 +241,65 @@ function grow(x) {
   x.forEach((num) => (sum *= num));
   return sum;
 }
+
+// A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?
+
+// Return true if yes, false otherwise :)
+
+function hero(bullets, dragons) {
+  return dragons <= bullets / 2 ? true : false;
+}
+
+// There was a test in your class and you passed it. Congratulations!
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// Return True if you're better, else False!
+
+// Note:
+// Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
+
+function betterThanAverage(classPoints, yourPoints) {
+  classPoints.push(yourPoints);
+  let sum = 0;
+  for (let score of classPoints) {
+    sum += score;
+  }
+  let average = sum / classPoints.length;
+  return yourPoints > average ? true : false;
+}
+
+// Write function bmi that calculates body mass index (bmi = weight / height2).
+
+// if bmi <= 18.5 return "Underweight"
+
+// if bmi <= 25.0 return "Normal"
+
+// if bmi <= 30.0 return "Overweight"
+
+// if bmi > 30 return "Obese"
+
+function bmi(weight, height) {
+  let bmi = weight / Math.pow(height, 2);
+  if (bmi <= 18.5) {
+    return "Underweight";
+  } else if (bmi <= 25.0) {
+    return "Normal";
+  } else if (bmi <= 30.0) {
+    return "Overweight";
+  } else if (bmi > 30) {
+    return "Obese";
+  }
+}
+
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+// Note: input will never be an empty string
+
+function fakeBin(x) {
+  return x
+    .split("")
+    .map((y) => (y >= 5 ? 1 : 0))
+    .join("");
+}
