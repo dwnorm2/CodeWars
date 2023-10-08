@@ -364,3 +364,65 @@ const reverseSeq = (n) => {
 // "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
 const stringToArray = (string) => string.split(" ");
+
+// If you can't sleep, just count sheep!!
+
+// Task:
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+var countSheep = function (num) {
+  let sheep = "";
+  for (let i = 1; i <= num; i++) {
+    sheep += `${i} sheep...`;
+  }
+  return sheep;
+};
+
+// Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
+
+// For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
+
+// Constraint:
+
+// 1 <= month <= 12
+
+const quarterOf = (month) =>
+  month <= 3 ? 1 : month <= 6 ? 2 : month <= 9 ? 3 : 4;
+
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+
+// Use conditionals to return the proper message:
+
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+
+function greet(name, owner) {
+  return name === owner ? "Hello boss" : "Hello guest";
+}
+
+// After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+
+// You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+
+// Write a code that gives out the total amount for different days(d).
+
+function rentalCarCost(d) {
+  let cost = 40 * d;
+  if (d >= 7) {
+    return cost - 50;
+  } else if (d >= 3) {
+    return cost - 20;
+  }
+  return cost;
+}
+
+// Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+
+class Kata {
+  static getVolumeOfCuboid(length, width, height) {
+    return length * width * height;
+  }
+}
