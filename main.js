@@ -450,3 +450,44 @@ function getGrade(s1, s2, s3) {
     ? "D"
     : "F";
 }
+
+// You are given two interior angles (in degrees) of a triangle.
+
+// Write a function to return the 3rd.
+
+// Note: only positive integers will be tested.
+
+function otherAngle(a, b) {
+  return 180 - a - b;
+}
+
+// Points are awarded for each match as follows:
+
+// if x > y: 3 points (win)
+// if x < y: 0 points (loss)
+// if x = y: 1 point (tie)
+// We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
+
+// Notes:
+
+// our team always plays 10 matches in the championship
+// 0 <= x <= 4
+// 0 <= y <= 4
+
+function points(games) {
+  let xTotal = 0;
+  let yTotal = 0;
+  let points = 0;
+
+  for (let score of games) {
+    xTotal = Number(score.charAt(0));
+    yTotal = Number(score.charAt(2));
+    xTotal > yTotal
+      ? (points += 3)
+      : xTotal == yTotal
+      ? (points += 1)
+      : (points += 0);
+  }
+
+  return points;
+}
