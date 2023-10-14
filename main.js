@@ -574,7 +574,7 @@ function sumArray(array) {
   } else {
     let lowestNum = array[0];
     let highestNum = array[0];
-    let newArr = [];
+    let sum = 0;
     for (let num of array) {
       if (num > lowestNum) {
         lowestNum = num;
@@ -582,12 +582,6 @@ function sumArray(array) {
       if (num < highestNum) {
         highestNum = num;
       }
-      newArr.push(num);
-    }
-    console.log(newArr);
-
-    let sum = 0;
-    for (let num of newArr) {
       sum += num;
     }
     return sum - lowestNum - highestNum;
