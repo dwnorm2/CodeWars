@@ -694,3 +694,49 @@ function switchItUp(number) {
 function checkForFactor(base, factor) {
   return base % factor === 0;
 }
+
+// Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero numbers.
+
+// Examples:
+// 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
+// 2) n =  12, x = 2, y = 6 =>  true because  12 is divisible by 2 and 6
+// 3) n = 100, x = 5, y = 3 => false because 100 is not divisible by 3
+// 4) n =  12, x = 7, y = 5 => false because  12 is neither divisible by 7 nor 5
+
+function isDivisible(n, x, y) {
+  return n % x === 0 && n % y === 0;
+}
+
+// Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
+
+// Can you help her?
+
+function greet(name) {
+  if (name === "Johnny") return "Hello, my love!";
+  return "Hello, " + name + "!";
+}
+
+// Complete the solution so that it reverses all of the words within the string passed in.
+
+// Words are separated by exactly one space and there are no leading or trailing spaces.
+
+// Example(Input --> Output):
+
+// "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+let reverseWords = (str) => str.split(" ").reverse().join(" ");
+
+// It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+// Return the average of the given array rounded down to its nearest integer.
+
+// The array will never be empty.
+
+function getAverage(marks) {
+  let sum = marks.reduce((sum, x) => sum + x);
+  return Math.floor(sum / marks.length);
+}
+
+// Now you have to write a function that takes an argument and returns the square of it.
+
+let square = (num) => num ** 2;
