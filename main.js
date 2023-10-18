@@ -740,3 +740,93 @@ function getAverage(marks) {
 // Now you have to write a function that takes an argument and returns the square of it.
 
 let square = (num) => num ** 2;
+
+// Your function takes two arguments:
+
+// current father's age (years)
+// current age of his son (years)
+// Сalculate how many years ago the father was twice as old as his son (or in how many years he will be twice as old). The answer is always greater or equal to 0, no matter if it was in the past or it is in the future.
+
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - sonYearsOld * 2);
+}
+
+// Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+
+// Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+
+// If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+// If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+
+function hoopCount(n) {
+  return n >= 10
+    ? "Great, now move on to tricks"
+    : "Keep at it until you get it";
+}
+
+// The function is not returning the correct values. Can you figure out why?
+
+// Example (Input --> Output ):
+
+// 3 --> "Earth"
+
+function getPlanetName(id) {
+  var name;
+  switch (id) {
+    case 1:
+      name = "Mercury";
+      break;
+    case 2:
+      name = "Venus";
+      break;
+    case 3:
+      name = "Earth";
+      break;
+    case 4:
+      name = "Mars";
+      break;
+    case 5:
+      name = "Jupiter";
+      break;
+    case 6:
+      name = "Saturn";
+      break;
+    case 7:
+      name = "Uranus";
+      break;
+    case 8:
+      name = "Neptune";
+  }
+
+  return name;
+}
+
+// Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+// None of the arrays will be empty, so you don't have to worry about that!
+
+function removeEveryOther(arr) {
+  return arr.filter((element, i) => i % 2 == 0);
+}
+
+// The Story:
+// Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+
+// Task Overview:
+// You have to write a function that accepts three parameters:
+
+// cap is the amount of people the bus can hold excluding the driver.
+// on is the number of people on the bus excluding the driver.
+// wait is the number of people waiting to get on to the bus excluding the driver.
+// If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+
+// Usage Examples:
+// cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+// cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+
+function enough(cap, on, wait) {
+  return cap - on > wait ? 0 : wait - (cap - on);
+}
