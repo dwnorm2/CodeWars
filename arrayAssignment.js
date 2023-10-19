@@ -46,3 +46,16 @@ let arr3 = [5, 2, 1, -10, 8];
 
 arr3.sort((n1, n2) => n2 - n1);
 console.log(arr3);
+
+// Copy and Sort array
+
+let arr4 = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(arr4);
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+console.log(sorted);
+console.log(arr4);
