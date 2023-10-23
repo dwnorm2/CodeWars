@@ -957,11 +957,17 @@ function between(a, b) {
 // "String.prototype.toAlternatingCase".toAlternatingCase() === "sTRING.PROTOTYPE.TOaLTERNATINGcASE"
 // As usual, your function/method should be pure, i.e. it should not mutate the original string.
 
+// String.prototype.toAlternatingCase = function () {
+//   let arr = this.split("");
+//   let altArr = [];
+//   altArr = arr.map((x) =>
+//     x.toUpperCase() == x ? x.toLowerCase() : x.toUpperCase()
+//   );
+//   return altArr.join("");
+// };
+
 String.prototype.toAlternatingCase = function () {
-  let arr = this.split("");
-  let altArr = [];
-  altArr = arr.map((x) =>
-    x.toUpperCase() == x ? x.toLowerCase() : x.toUpperCase()
-  );
-  return altArr.join("");
+  return this.split("")
+    .map((x) => (x.toUpperCase() == x ? x.toLowerCase() : x.toUpperCase()))
+    .join("");
 };
