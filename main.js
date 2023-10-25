@@ -1113,3 +1113,42 @@ var championsLeagueGoals = 10;
 var copaDelReyGoals = 5;
 
 var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals;
+
+// Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+
+// Example: (Input1, Input2 -->Output)
+
+// "4",  "5" --> "9"
+// "34", "5" --> "39"
+// "", "" --> "0"
+// "2", "" --> "2"
+// "-5", "3" --> "-2"
+// Notes:
+
+// If either input is an empty string, consider it as zero.
+
+// Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
+
+function sumStr(a, b) {
+  return (Number(a) + Number(b)).toString();
+}
+
+// In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+// Your function will be tested with pre-made examples as well as random ones.
+
+// If you can, try writing it in one line of code.
+
+function findDifference(a, b) {
+  let volA = 1;
+  let volB = 1;
+  for (let x of a) {
+    volA *= x;
+  }
+  for (let x of b) {
+    volB *= x;
+  }
+  return volA > volB ? volA - volB : volB - volA;
+}
