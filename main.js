@@ -1152,3 +1152,133 @@ function findDifference(a, b) {
   }
   return volA > volB ? volA - volB : volB - volA;
 }
+
+// Is the string uppercase?
+// Task
+// Create a method to see whether the string is ALL CAPS.
+
+// Examples (input -> output)
+// "c" -> False
+// "C" -> True
+// "hello I AM DONALD" -> False
+// "HELLO I AM DONALD" -> True
+// "ACSKLDFJSgSKLDFJSKLDFJ" -> False
+// "ACSKLDFJSGSKLDFJSKLDFJ" -> True
+// In this Kata, a string is said to be in ALL CAPS whenever it does not contain any lowercase letter so any string containing no letters at all is trivially considered to be in ALL CAPS.
+
+String.prototype.isUpperCase = function () {
+  return this == this.toUpperCase();
+};
+
+// Kata Task
+// I have a cat and a dog.
+
+// I got them at the same time as kitten/puppy. That was humanYears years ago.
+
+// Return their respective ages now as [humanYears,catYears,dogYears]
+
+// NOTES:
+
+// humanYears >= 1
+// humanYears are whole numbers only
+// Cat Years
+// 15 cat years for first year
+// +9 cat years for second year
+// +4 cat years for each year after that
+// Dog Years
+// 15 dog years for first year
+// +9 dog years for second year
+// +5 dog years for each year after that
+
+var humanYearsCatYearsDogYears = function (humanYears) {
+  let dogYears = 15;
+  let catYears = 15;
+
+  if (humanYears >= 2) {
+    dogYears += 9;
+    catYears += 9;
+  }
+
+  if (humanYears >= 3) {
+    dogYears += (humanYears - 2) * 5;
+    catYears += (humanYears - 2) * 4;
+  }
+
+  let solution = [humanYears, catYears, dogYears];
+  return solution;
+};
+
+// Your start-up's BA has told marketing that your website has a large audience in Scandinavia and surrounding countries. Marketing thinks it would be great to welcome visitors to the site in their own language. Luckily you already use an API that detects the user's location, so this is an easy win.
+
+// The Task
+// Think of a way to store the languages as a database. The languages are listed below so you can copy and paste!
+// Write a 'welcome' function that takes a parameter 'language', with a type String, and returns a greeting - if you have it in your database. It should default to English if the language is not in the database, or in the event of an invalid input.
+// The Database
+// [ ("english", "Welcome")
+// , ("czech", "Vitejte")
+// , ("danish", "Velkomst")
+// , ("dutch", "Welkom")
+// , ("estonian", "Tere tulemast")
+// , ("finnish", "Tervetuloa")
+// , ("flemish", "Welgekomen")
+// , ("french", "Bienvenue")
+// , ("german", "Willkommen")
+// , ("irish", "Failte")
+// , ("italian", "Benvenuto")
+// , ("latvian", "Gaidits")
+// , ("lithuanian", "Laukiamas")
+// , ("polish", "Witamy")
+// , ("spanish", "Bienvenido")
+// , ("swedish", "Valkommen")
+// , ("welsh", "Croeso")
+// ]
+// Possible invalid inputs include:
+
+// IP_ADDRESS_INVALID - not a valid ipv4 or ipv6 ip address
+// IP_ADDRESS_NOT_FOUND - ip address not in the database
+// IP_ADDRESS_REQUIRED - no ip address was supplied
+
+function greet(language) {
+  let data = [
+    "english",
+    "Welcome",
+    "czech",
+    "Vitejte",
+    "danish",
+    "Velkomst",
+    "dutch",
+    "Welkom",
+    "estonian",
+    "Tere tulemast",
+    "finnish",
+    "Tervetuloa",
+    "flemish",
+    "Welgekomen",
+    "french",
+    "Bienvenue",
+    "german",
+    "Willkommen",
+    "irish",
+    "Failte",
+    "italian",
+    "Benvenuto",
+    "latvian",
+    "Gaidits",
+    "lithuanian",
+    "Laukiamas",
+    "polish",
+    "Witamy",
+    "spanish",
+    "Bienvenido",
+    "swedish",
+    "Valkommen",
+    "welsh",
+    "Croeso",
+  ];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i] == language) {
+      return data[i + 1];
+    }
+  }
+  return data[1];
+}
