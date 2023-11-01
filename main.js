@@ -1461,3 +1461,46 @@ function nameShuffler(str) {
 function howManyLightsabersDoYouOwn(name) {
   return name === "Zach" ? 18 : 0;
 }
+
+// Exclusive "or" (xor) Logical Operator
+// Overview
+// In some scripting languages like PHP, there exists a logical operator (e.g. &&, ||, and, or, etc.) called the "Exclusive Or" (hence the name of this Kata). The exclusive or evaluates two booleans. It then returns true if exactly one of the two expressions are true, false otherwise. For example:
+
+// false xor false == false // since both are false
+// true xor false == true // exactly one of the two expressions are true
+// false xor true == true // exactly one of the two expressions are true
+// true xor true == false // Both are true.  "xor" only returns true if EXACTLY one of the two expressions evaluate to true.
+// Task
+// Since we cannot define keywords in Javascript (well, at least I don't know how to do it), your task is to define a function xor(a, b) where a and b are the two expressions to be evaluated. Your xor function should have the behaviour described above, returning true if exactly one of the two expressions evaluate to true, false otherwise.
+
+function xor(a, b) {
+  return a !== b;
+}
+
+// We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
+
+// You only need to worry about english grammar rules for this kata, where anything that isn't singular (one of something), it is plural (not one of something).
+
+// All values will be positive integers or floats, or zero.
+
+function plural(n) {
+  return n !== 1;
+}
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  return str
+    .split("")
+    .reduce(
+      (total, char) =>
+        char == "a" || char == "e" || char == "i" || char == "o" || char == "u"
+          ? total + 1
+          : total + 0,
+      0
+    );
+}
