@@ -1538,3 +1538,97 @@ function squareDigits(num) {
     .map((num) => num ** 2)
     .join("");
 }
+
+// In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
+
+// Examples
+// highAndLow("1 2 3 4 5");  // return "5 1"
+// highAndLow("1 2 -3 4 5"); // return "5 -3"
+// highAndLow("1 9 3 4 -5"); // return "9 -5"
+// Notes
+// All numbers are valid Int32, no need to validate them.
+// There will always be at least one number in the input string.
+// Output string must be two numbers separated by a single space, and highest number is first.
+
+function highAndLow(numbers) {
+  let arr = numbers.split(" ");
+  return `${Math.max(...arr)} ${Math.min(...arr)}`;
+}
+
+// In JavaScript, your code is running in a function, let us step by step complete your first JS function.
+
+// Look at this example:
+
+//       --------keyword "function"
+//       |       ----your function name
+//       |       |    ---if needed, some arguments will appear in parentheses
+//       |       |    |
+//     function myfunc(){  ---------your function code will starting with "{"
+//       //you should type your code here
+//     }----------------------------ending with "}"
+// If we want to print some to the screen, maybe we can use Document.write() in the web, or use alert() pop your message, but Codewars did not support these methods, we should use console.log() in your function. see this example:
+
+// function printWordToScreen(){
+//   var somewords="This is an example."
+//   console.log(somewords)
+// }
+// If we run this function, This is an example. will be seen on the screen. As you see, console.log() is an useful method. You will use it a lot!
+
+// Task
+// Please refer to two example above and write your first JS function.
+
+// mission 1:
+
+// use keyword function to define your function, function name should be helloWorld(don't forget the () and {})
+
+// mission 2:
+
+// use keyword var (or let or const) to define a variable str, value of str should be a string: "Hello World!"(don't forget the =).
+
+// mission 3:
+
+// type the console.log() in the next line (don't forget to put the str in the parentheses).
+
+// When you have finished the work, click "Run Tests" to see if your code is working properly.
+
+// In the end, click "Submit" to submit your code pass this kata.
+
+function helloWorld() {
+  let str = "Hello World!";
+  console.log(str);
+}
+
+// A square of squares
+// You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
+
+// However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
+
+// Task
+// Given an integral number, determine if it's a square number:
+
+// In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
+
+// The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+
+// Examples
+// -1  =>  false
+//  0  =>  true
+//  3  =>  false
+//  4  =>  true
+// 25  =>  true
+// 26  =>  false
+
+var isSquare = function (n) {
+  for (let i = 0; i <= n; i++) {
+    if (n == i * i) {
+      return true;
+    }
+  }
+  return false;
+};
+
+//or
+
+function isSquare(n) {
+  return Math.sqrt(n) % 1 === 0;
+}
