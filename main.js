@@ -1682,3 +1682,54 @@ function addFive(num) {
   var total = num + 5;
   return total;
 }
+
+// You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+let getMiddle = (s) =>
+  s.length % 2 !== 0
+    ? s[Math.floor(s.length / 2)]
+    : s[s.length / 2 - 1] + s[s.length / 2];
+
+//     An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
+
+// Example: (Input --> Output)
+
+// "Dermatoglyphics" --> true "aba" --> false "moOse" --> false (ignore letter case)
+
+// isIsogram "Dermatoglyphics" = true
+// isIsogram "moose" = false
+// isIsogram "aba" = false
+
+function isIsogram(str) {
+  let arr = str.toLowerCase().split("");
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (newArr.includes(arr[i])) {
+      return false;
+    }
+    newArr.push(arr[i]);
+  }
+  return true;
+}
+
+// Issue
+// Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+
+// The pipes connecting your level's stages together need to be fixed before you receive any more complaints.
+
+// The pipes are correct when each pipe after the first is 1 more than the previous one.
+
+// Task
+// Given a list of unique numbers sorted in ascending order, return a new list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included).
+
+// Example
+// Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
+
+function pipeFix(numbers) {
+  let arr = [numbers[0]];
+  let lastNum = numbers[numbers.length - 1];
+  for (let i = 0; i < lastNum - numbers[0]; i++) {
+    arr.push(arr[i] + 1);
+  }
+  return arr;
+}
