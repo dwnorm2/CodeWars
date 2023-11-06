@@ -1761,3 +1761,9 @@ String.prototype.toJadenCase = function () {
     .map((word) => word[0].toUpperCase() + word.slice(1))
     .join(" ");
 };
+
+// Simple, given a string of words, return the length of the shortest word(s).
+
+// String will never be empty and you do not need to account for different data types.
+
+let findShort = (s) => Math.min(...s.split(" ").map((x) => x.length));
