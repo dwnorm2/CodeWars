@@ -1914,3 +1914,14 @@ function HQ9(code) {
 function friend(friends) {
   return friends.filter((x) => x.length == 4);
 }
+
+Write a function that merges two sorted arrays into a single one. The arrays only contain integers. Also, the final outcome must be sorted and not have any duplicate.
+
+function mergeArrays(a, b) {
+  return ([a] + "," + [b])
+    .split(",")
+    .filter((n) => n)
+    .sort((a, b) => a - b)
+    .map((x) => Number(x))
+    .filter((e, i, a) => e !== a[i - 1]);
+}
