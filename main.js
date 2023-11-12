@@ -1953,8 +1953,6 @@ function distinct(a) {
 
 // * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
 
-// Happy coding!
-
 function mergeArrays(arr1, arr2) {
   return arr1.concat(arr2).sort((a,b) => a-b).filter((e, i, a) => e !== a[i - 1])
 }
