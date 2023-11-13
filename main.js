@@ -1956,3 +1956,13 @@ function distinct(a) {
 function mergeArrays(arr1, arr2) {
   return arr1.concat(arr2).sort((a,b) => a-b).filter((e, i, a) => e !== a[i - 1])
 }
+
+// Write a function that always returns 5
+
+// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+// Good luck :)
+
+function unusualFive() {
+  return ["a","a","a","a","a"].length
+  }
