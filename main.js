@@ -2007,4 +2007,3 @@ function chromosomeCheck(sperm) {
   : "Congratulations! You're going to have a daughter."
 }
 
-//test
