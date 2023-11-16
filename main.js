@@ -1937,7 +1937,7 @@ function mergeArrays(a, b) {
 // [1, 2, 1, 1, 3, 2] -> [1, 2, 3]
 
 function distinct(a) {
-  return a.filter((x,i) => a.indexOf(x) === i);
+  return a.filter((x, i) => a.indexOf(x) === i);
 }
 
 // You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
@@ -1954,7 +1954,10 @@ function distinct(a) {
 // * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
 
 function mergeArrays(arr1, arr2) {
-  return arr1.concat(arr2).sort((a,b) => a-b).filter((e, i, a) => e !== a[i - 1])
+  return arr1
+    .concat(arr2)
+    .sort((a, b) => a - b)
+    .filter((e, i, a) => e !== a[i - 1]);
 }
 
 // Write a function that always returns 5
@@ -1964,12 +1967,12 @@ function mergeArrays(arr1, arr2) {
 // Good luck :)
 
 function unusualFive() {
-  return ["a","a","a","a","a"].length
-  }
+  return ["a", "a", "a", "a", "a"].length;
+}
 
 // Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
 
-let problem = x => typeof x == "number" ? x * 50 + 6 : "Error"
+let problem = (x) => (typeof x == "number" ? x * 50 + 6 : "Error");
 
 // Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
 
@@ -1990,9 +1993,11 @@ let problem = x => typeof x == "number" ? x * 50 + 6 : "Error"
 // Output: "Pls go away and stop eating my sheep"
 
 function warnTheSheep(queue) {
-  let i = queue.reverse().indexOf("wolf")
-  return i > 0 ? `Oi! Sheep number ${i}! You are about to be eaten by a wolf!` : "Pls go away and stop eating my sheep"
-  }
+  let i = queue.reverse().indexOf("wolf");
+  return i > 0
+    ? `Oi! Sheep number ${i}! You are about to be eaten by a wolf!`
+    : "Pls go away and stop eating my sheep";
+}
 
 //   The male gametes or sperm cells in humans and other mammals are heterogametic and contain one of two types of sex chromosomes. They are either X or Y. The female gametes or eggs however, contain only the X sex chromosome and are homogametic.
 
@@ -2003,7 +2008,7 @@ function warnTheSheep(queue) {
 // If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";
 
 function chromosomeCheck(sperm) {
-  return sperm.includes("Y") ? "Congratulations! You're going to have a son."
-  : "Congratulations! You're going to have a daughter."
+  return sperm.includes("Y")
+    ? "Congratulations! You're going to have a son."
+    : "Congratulations! You're going to have a daughter?";
 }
-
