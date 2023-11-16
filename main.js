@@ -1940,4 +1940,70 @@ function distinct(a) {
   return a.filter((x,i) => a.indexOf(x) === i);
 }
 
+// You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
+
+// You don't need to worry about validation, since arr1 and arr2 must be arrays with 0 or more Integers. If both arr1 and arr2 are empty, then just return an empty array.
+
+// Note: arr1 and arr2 may be sorted in different orders. Also arr1 and arr2 may have same integers. Remove duplicated in the returned result.
+// Examples (input -> output)
+
+// * [1, 2, 3, 4, 5], [6, 7, 8, 9, 10] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// * [1, 3, 5, 7, 9], [10, 8, 6, 4, 2] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
+
+function mergeArrays(arr1, arr2) {
+  return arr1.concat(arr2).sort((a,b) => a-b).filter((e, i, a) => e !== a[i - 1])
+}
+
+// Write a function that always returns 5
+
+// Sounds easy right? Just bear in mind that you can't use any of the following characters: 0123456789*+-/
+
+// Good luck :)
+
+function unusualFive() {
+  return ["a","a","a","a","a"].length
+  }
+
+// Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
+
+let problem = x => typeof x == "number" ? x * 50 + 6 : "Error"
+
+// Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
+
+// Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the queue which is at the end of the array:
+
+// [sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)
+//    7      6      5      4      3            2      1
+
+// If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep". Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
+
+// Note: there will always be exactly one wolf in the array.
+// Examples
+
+// Input: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+// Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+
+// Input: ["sheep", "sheep", "wolf"]
+// Output: "Pls go away and stop eating my sheep"
+
+function warnTheSheep(queue) {
+  let i = queue.reverse().indexOf("wolf")
+  return i > 0 ? `Oi! Sheep number ${i}! You are about to be eaten by a wolf!` : "Pls go away and stop eating my sheep"
+  }
+
+//   The male gametes or sperm cells in humans and other mammals are heterogametic and contain one of two types of sex chromosomes. They are either X or Y. The female gametes or eggs however, contain only the X sex chromosome and are homogametic.
+
+// The sperm cell determines the sex of an individual in this case. If a sperm cell containing an X chromosome fertilizes an egg, the resulting zygote will be XX or female. If the sperm cell contains a Y chromosome, then the resulting zygote will be XY or male.
+
+// Determine if the sex of the offspring will be male or female based on the X or Y chromosome present in the male's sperm.
+
+// If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";
+
+function chromosomeCheck(sperm) {
+  return sperm.includes("Y") ? "Congratulations! You're going to have a son."
+  : "Congratulations! You're going to have a daughter."
+}
 
