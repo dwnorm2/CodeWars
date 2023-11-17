@@ -2042,5 +2042,5 @@ let toBinary = n => +n.toString(2)
 // This is a modification on the Kata: Array2Binary addition hope you like it
 
 function arr2bin(arr){
-  return arr.reduce((sum,num) =>  (typeof num) == "number" ? sum += num : sum += 0 , 0).toString(2)
+  return arr.reduce((sum,num) =>  sum + (typeof num == "number" ?  num : 0) , 0).toString(2)
 }
