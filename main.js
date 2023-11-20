@@ -1,7 +1,7 @@
 // Complete the function which converts a binary number (given as a string) to a decimal number.
 
 function binToDec(bin) {
-  let arr = bin.split("").reverse();
+  let arr = bin.split('').reverse();
   let decimal = 0;
   for (let i = 0; i < arr.length; i++) {
     if (Number(arr[i]) === 1) {
@@ -94,7 +94,7 @@ let maps = (x) => x.map((y) => y * 2);
 // 0 => [0]
 
 function digitize(n) {
-  return n.toString().split("").reverse().map(Number);
+  return n.toString().split('').reverse().map(Number);
 }
 
 // Clock shows h hours, m minutes and s seconds after midnight.
@@ -128,7 +128,7 @@ function past(h, m, s) {
 // patrick feeney => P.F
 
 function abbrevName(name) {
-  let arr = name.split(" ");
+  let arr = name.split(' ');
   let firstName = arr[0].toUpperCase();
   let lastName = arr[1].toUpperCase();
   return `${firstName[0]}.${lastName[0]}`;
@@ -167,7 +167,7 @@ let simpleMultiplication = (number) =>
 // ["hay", "junk", "hay", "hay", "moreJunk", "needle", "randomJunk"] --> "found the needle at position 5"
 
 function findNeedle(haystack) {
-  return `found the needle at position ${haystack.indexOf("needle")}`;
+  return `found the needle at position ${haystack.indexOf('needle')}`;
 }
 
 // Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
@@ -283,13 +283,13 @@ function betterThanAverage(classPoints, yourPoints) {
 function bmi(weight, height) {
   let bmi = weight / Math.pow(height, 2);
   if (bmi <= 18.5) {
-    return "Underweight";
+    return 'Underweight';
   } else if (bmi <= 25.0) {
-    return "Normal";
+    return 'Normal';
   } else if (bmi <= 30.0) {
-    return "Overweight";
+    return 'Overweight';
   } else if (bmi > 30) {
-    return "Obese";
+    return 'Obese';
   }
 }
 
@@ -299,9 +299,9 @@ function bmi(weight, height) {
 
 function fakeBin(x) {
   return x
-    .split("")
+    .split('')
     .map((y) => (y >= 5 ? 1 : 0))
-    .join("");
+    .join('');
 }
 
 // You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
@@ -319,7 +319,7 @@ let check = (a, x) => (a.includes(x) ? true : false);
 // ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
 function smash(words) {
-  return words.join(" ");
+  return words.join(' ');
 }
 
 // You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left.
@@ -342,7 +342,7 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) =>
 // "GCAT"  =>  "GCAU"
 // The input string can be of arbitrary length - in particular, it may be empty. All input is guaranteed to be valid, i.e. each input string will only ever consist of 'G', 'C', 'A' and/or 'T'.
 
-const DNAtoRNA = (dna) => dna.replaceAll("T", "U");
+const DNAtoRNA = (dna) => dna.replaceAll('T', 'U');
 
 // Build a function that returns an array of integers from n to 1 where n>0.
 
@@ -363,7 +363,7 @@ const reverseSeq = (n) => {
 
 // "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 
-const stringToArray = (string) => string.split(" ");
+const stringToArray = (string) => string.split(' ');
 
 // If you can't sleep, just count sheep!!
 
@@ -371,7 +371,7 @@ const stringToArray = (string) => string.split(" ");
 // Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 
 var countSheep = function (num) {
-  let sheep = "";
+  let sheep = '';
   for (let i = 1; i <= num; i++) {
     sheep += `${i} sheep...`;
   }
@@ -398,7 +398,7 @@ const quarterOf = (month) =>
 // otherwise	'Hello guest'
 
 function greet(name, owner) {
-  return name === owner ? "Hello boss" : "Hello guest";
+  return name === owner ? 'Hello boss' : 'Hello guest';
 }
 
 // After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
@@ -441,14 +441,14 @@ class Kata {
 function getGrade(s1, s2, s3) {
   let score = (s1 + s2 + s3) / 3;
   return score >= 90
-    ? "A"
+    ? 'A'
     : score >= 80
-    ? "B"
+    ? 'B'
     : score >= 70
-    ? "C"
+    ? 'C'
     : score >= 60
-    ? "D"
-    : "F";
+    ? 'D'
+    : 'F';
 }
 
 // You are given two interior angles (in degrees) of a triangle.
@@ -645,34 +645,34 @@ function cockroachSpeed(s) {
 function switchItUp(number) {
   switch (number) {
     case 0:
-      return "Zero";
+      return 'Zero';
 
     case 1:
-      return "One";
+      return 'One';
 
     case 2:
-      return "Two";
+      return 'Two';
 
     case 3:
-      return "Three";
+      return 'Three';
 
     case 4:
-      return "Four";
+      return 'Four';
 
     case 5:
-      return "Five";
+      return 'Five';
 
     case 6:
-      return "Six";
+      return 'Six';
 
     case 7:
-      return "Seven";
+      return 'Seven';
 
     case 8:
-      return "Eight";
+      return 'Eight';
 
     case 9:
-      return "Nine";
+      return 'Nine';
   }
 }
 
@@ -712,8 +712,8 @@ function isDivisible(n, x, y) {
 // Can you help her?
 
 function greet(name) {
-  if (name === "Johnny") return "Hello, my love!";
-  return "Hello, " + name + "!";
+  if (name === 'Johnny') return 'Hello, my love!';
+  return 'Hello, ' + name + '!';
 }
 
 // Complete the solution so that it reverses all of the words within the string passed in.
@@ -724,7 +724,7 @@ function greet(name) {
 
 // "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
 
-let reverseWords = (str) => str.split(" ").reverse().join(" ");
+let reverseWords = (str) => str.split(' ').reverse().join(' ');
 
 // It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
 
@@ -760,8 +760,8 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
 
 function hoopCount(n) {
   return n >= 10
-    ? "Great, now move on to tricks"
-    : "Keep at it until you get it";
+    ? 'Great, now move on to tricks'
+    : 'Keep at it until you get it';
 }
 
 // The function is not returning the correct values. Can you figure out why?
@@ -774,28 +774,28 @@ function getPlanetName(id) {
   var name;
   switch (id) {
     case 1:
-      name = "Mercury";
+      name = 'Mercury';
       break;
     case 2:
-      name = "Venus";
+      name = 'Venus';
       break;
     case 3:
-      name = "Earth";
+      name = 'Earth';
       break;
     case 4:
-      name = "Mars";
+      name = 'Mars';
       break;
     case 5:
-      name = "Jupiter";
+      name = 'Jupiter';
       break;
     case 6:
-      name = "Saturn";
+      name = 'Saturn';
       break;
     case 7:
-      name = "Uranus";
+      name = 'Uranus';
       break;
     case 8:
-      name = "Neptune";
+      name = 'Neptune';
   }
 
   return name;
@@ -905,7 +905,7 @@ function move(position, roll) {
 // In languages with no distinct character data type, the second argument will be a string of length 1
 
 function strCount(str, letter) {
-  let arr = str.split("");
+  let arr = str.split('');
   let result = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] == letter) {
@@ -967,9 +967,9 @@ function between(a, b) {
 // };
 
 String.prototype.toAlternatingCase = function () {
-  return this.split("")
+  return this.split('')
     .map((x) => (x.toUpperCase() == x ? x.toLowerCase() : x.toUpperCase()))
-    .join("");
+    .join('');
 };
 
 // Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
@@ -1014,7 +1014,7 @@ function powersOfTwo(n) {
 // }
 
 function correct(string) {
-  return string.replaceAll(0, "O").replaceAll(1, "I").replaceAll(5, "S");
+  return string.replaceAll(0, 'O').replaceAll(1, 'I').replaceAll(5, 'S');
 }
 
 // Task
@@ -1089,7 +1089,7 @@ function finalGrade(exam, projects) {
 // A palindrome is a word, number, phrase, or other sequence of symbols that reads the same backwards as forwards, such as madam or racecar.
 
 const isPalindrome = (x) =>
-  x.toLowerCase() == x.toLowerCase().split("").reverse().join("");
+  x.toLowerCase() == x.toLowerCase().split('').reverse().join('');
 
 // Messi's Goal Total
 // Use variables to find the sum of the goals Messi scored in 3 competitions
@@ -1240,40 +1240,40 @@ var humanYearsCatYearsDogYears = function (humanYears) {
 
 function greet(language) {
   let data = [
-    "english",
-    "Welcome",
-    "czech",
-    "Vitejte",
-    "danish",
-    "Velkomst",
-    "dutch",
-    "Welkom",
-    "estonian",
-    "Tere tulemast",
-    "finnish",
-    "Tervetuloa",
-    "flemish",
-    "Welgekomen",
-    "french",
-    "Bienvenue",
-    "german",
-    "Willkommen",
-    "irish",
-    "Failte",
-    "italian",
-    "Benvenuto",
-    "latvian",
-    "Gaidits",
-    "lithuanian",
-    "Laukiamas",
-    "polish",
-    "Witamy",
-    "spanish",
-    "Bienvenido",
-    "swedish",
-    "Valkommen",
-    "welsh",
-    "Croeso",
+    'english',
+    'Welcome',
+    'czech',
+    'Vitejte',
+    'danish',
+    'Velkomst',
+    'dutch',
+    'Welkom',
+    'estonian',
+    'Tere tulemast',
+    'finnish',
+    'Tervetuloa',
+    'flemish',
+    'Welgekomen',
+    'french',
+    'Bienvenue',
+    'german',
+    'Willkommen',
+    'irish',
+    'Failte',
+    'italian',
+    'Benvenuto',
+    'latvian',
+    'Gaidits',
+    'lithuanian',
+    'Laukiamas',
+    'polish',
+    'Witamy',
+    'spanish',
+    'Bienvenido',
+    'swedish',
+    'Valkommen',
+    'welsh',
+    'Croeso',
   ];
   for (let i = 0; i < data.length; i++) {
     if (data[i] == language) {
@@ -1309,12 +1309,12 @@ function reverseList(list) {
 
 function howMuchILoveYou(nbPetals) {
   let choices = [
-    "I love you",
-    "a little",
-    "a lot",
-    "passionately",
-    "madly",
-    "not at all",
+    'I love you',
+    'a little',
+    'a lot',
+    'passionately',
+    'madly',
+    'not at all',
   ];
   return choices[(nbPetals - 1) % 6];
 }
@@ -1325,7 +1325,7 @@ function howMuchILoveYou(nbPetals) {
 
 // You should not remove or add elements from/to the array.
 
-let twoSort = (s) => s.sort()[0].split("").join("***");
+let twoSort = (s) => s.sort()[0].split('').join('***');
 
 // In this simple exercise, you will build a program that takes a value, integer , and returns a list of its multiples up to another value, limit . If limit is a multiple of integer, it should be included as well. There will only ever be positive integers passed into the function, not consisting of 0. The limit will always be higher than the base.
 
@@ -1350,7 +1350,7 @@ function findMultiples(integer, limit) {
 // y is not considered a vowel for this kata
 
 function shortcut(string) {
-  return string.replaceAll(/a|e|i|o|u/g, "");
+  return string.replaceAll(/a|e|i|o|u/g, '');
 }
 
 // Kids drink toddy.
@@ -1375,12 +1375,12 @@ function shortcut(string) {
 
 function peopleWithAgeDrink(old) {
   return old < 14
-    ? "drink toddy"
+    ? 'drink toddy'
     : old < 18
-    ? "drink coke"
+    ? 'drink coke'
     : old < 21
-    ? "drink beer"
-    : "drink whisky";
+    ? 'drink beer'
+    : 'drink whisky';
 }
 
 // Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
@@ -1397,7 +1397,7 @@ function peopleWithAgeDrink(old) {
 // The elements in the returned array should be in the same order as in the initial array passed to your function, albeit with the 'geese' removed. Note that all of the strings will be in the same case as those provided, and some elements may be repeated.
 
 function gooseFilter(birds) {
-  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  var geese = ['African', 'Roman Tufted', 'Toulouse', 'Pilgrim', 'Steinbacher'];
 
   return birds.filter((x) => !geese.includes(x));
 }
@@ -1442,7 +1442,7 @@ function getChar(n) {
 // "john McClane" --> "McClane john"
 
 function nameShuffler(str) {
-  return str.split(" ").reverse().join(" ");
+  return str.split(' ').reverse().join(' ');
 }
 
 // Inspired by the development team at Vooza, write the function that
@@ -1459,7 +1459,7 @@ function nameShuffler(str) {
 // "Zach" --> 18
 
 function howManyLightsabersDoYouOwn(name) {
-  return name === "Zach" ? 18 : 0;
+  return name === 'Zach' ? 18 : 0;
 }
 
 // Exclusive "or" (xor) Logical Operator
@@ -1495,10 +1495,10 @@ function plural(n) {
 
 function getCount(str) {
   return str
-    .split("")
+    .split('')
     .reduce(
       (total, char) =>
-        char == "a" || char == "e" || char == "i" || char == "o" || char == "u"
+        char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u'
           ? total + 1
           : total + 0,
       0
@@ -1516,13 +1516,13 @@ function getCount(str) {
 // Note: for this kata y isn't considered a vowel.
 
 function disemvowel(str) {
-  return str.replace(/a|e|i|o|u|A|E|I|O|U/g, "");
+  return str.replace(/a|e|i|o|u|A|E|I|O|U/g, '');
 }
 
 //or
 
 function disemvowel(str) {
-  return str.replace(/[aeiou]/gi, "");
+  return str.replace(/[aeiou]/gi, '');
 }
 
 // Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
@@ -1534,9 +1534,9 @@ function disemvowel(str) {
 function squareDigits(num) {
   return +num
     .toString()
-    .split("")
+    .split('')
     .map((num) => num ** 2)
-    .join("");
+    .join('');
 }
 
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
@@ -1551,7 +1551,7 @@ function squareDigits(num) {
 // Output string must be two numbers separated by a single space, and highest number is first.
 
 function highAndLow(numbers) {
-  let arr = numbers.split(" ");
+  let arr = numbers.split(' ');
   return `${Math.max(...arr)} ${Math.min(...arr)}`;
 }
 
@@ -1594,7 +1594,7 @@ function highAndLow(numbers) {
 // In the end, click "Submit" to submit your code pass this kata.
 
 function helloWorld() {
-  let str = "Hello World!";
+  let str = 'Hello World!';
   console.log(str);
 }
 
@@ -1657,9 +1657,9 @@ function saleHotdogs(n) {
 function descendingOrder(n) {
   return +n
     .toString()
-    .split("")
+    .split('')
     .sort((a, b) => b - a)
-    .join("");
+    .join('');
 }
 
 // In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
@@ -1701,7 +1701,7 @@ let getMiddle = (s) =>
 // isIsogram "aba" = false
 
 function isIsogram(str) {
-  let arr = str.toLowerCase().split("");
+  let arr = str.toLowerCase().split('');
   let newArr = [];
   for (let i = 0; i < arr.length; i++) {
     if (newArr.includes(arr[i])) {
@@ -1745,7 +1745,7 @@ function pipeFix(numbers) {
 // XO("zzoo") => false
 
 let XO = (str) =>
-  str.toLowerCase().split("o").length == str.toLowerCase().split("x").length;
+  str.toLowerCase().split('o').length == str.toLowerCase().split('x').length;
 
 // Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
 
@@ -1757,16 +1757,16 @@ let XO = (str) =>
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 
 String.prototype.toJadenCase = function () {
-  return this.split(" ")
+  return this.split(' ')
     .map((word) => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
+    .join(' ');
 };
 
 // Simple, given a string of words, return the length of the shortest word(s).
 
 // String will never be empty and you do not need to account for different data types.
 
-let findShort = (s) => Math.min(...s.split(" ").map((x) => x.length));
+let findShort = (s) => Math.min(...s.split(' ').map((x) => x.length));
 
 // This time no story, no theory. The examples below show you how to write function accum:
 
@@ -1784,10 +1784,10 @@ function accum(s) {
         arr.push(s[i].toUpperCase());
       } else arr.push(s[i].toLowerCase());
     }
-    arr.push("-");
+    arr.push('-');
   }
   arr.pop();
-  return arr.join("");
+  return arr.join('');
 }
 
 // Your goal is to return multiplication table for number that is always an integer from 1 to 10.
@@ -1809,9 +1809,9 @@ function accum(s) {
 // Note: newlines should be added between rows, but there should be no trailing newline at the end. If you're unsure about the format, look at the sample tests.
 
 function multiTable(number) {
-  let table = "";
+  let table = '';
   for (let i = 1; i <= 10; i++) {
-    table += `${i} * ${number} = ${i * number}${i < 10 ? "\n" : ""}`;
+    table += `${i} * ${number} = ${i * number}${i < 10 ? '\n' : ''}`;
   }
   return table;
 }
@@ -1831,9 +1831,9 @@ function multiTable(number) {
 
 function DNAStrand(dna) {
   return dna
-    .split("")
-    .map((x) => (x == "A" ? "T" : x == "T" ? "A" : x == "C" ? "G" : "C"))
-    .join("");
+    .split('')
+    .map((x) => (x == 'A' ? 'T' : x == 'T' ? 'A' : x == 'C' ? 'G' : 'C'))
+    .join('');
 }
 
 // Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
@@ -1847,7 +1847,7 @@ function DNAStrand(dna) {
 // ball2.ballType     //=> "super"
 
 var Ball = function (ballType) {
-  this.ballType = ballType ? ballType : "regular";
+  this.ballType = ballType ? ballType : 'regular';
 };
 
 // Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
@@ -1890,12 +1890,12 @@ function sumTwoSmallestNumbers(numbers) {
 // (+ has no visible effects so we can safely ignore it.)
 
 function HQ9(code) {
-  return code == "H"
-    ? "Hello World!"
-    : code == "Q"
+  return code == 'H'
+    ? 'Hello World!'
+    : code == 'Q'
     ? code
-    : code == "9"
-    ? "99 bottles of beer on the wall, 99 bottles of beer.\nTake one down and pass it around, 98 bottles of beer on the wall.\n98 bottles of beer on the wall, 98 bottles of beer.\nTake one down and pass it around, 97 bottles of beer on the wall.\n97 bottles of beer on the wall, 97 bottles of beer.\nTake one down and pass it around, 96 bottles of beer on the wall.\n96 bottles of beer on the wall, 96 bottles of beer.\nTake one down and pass it around, 95 bottles of beer on the wall.\n95 bottles of beer on the wall, 95 bottles of beer.\nTake one down and pass it around, 94 bottles of beer on the wall.\n94 bottles of beer on the wall, 94 bottles of beer.\nTake one down and pass it around, 93 bottles of beer on the wall.\n93 bottles of beer on the wall, 93 bottles of beer.\nTake one down and pass it around, 92 bottles of beer on the wall.\n92 bottles of beer on the wall, 92 bottles of beer.\nTake one down and pass it around, 91 bottles of beer on the wall.\n91 bottles of beer on the wall, 91 bottles of beer.\nTake one down and pass it around, 90 bottles of beer on the wall.\n90 bottles of beer on the wall, 90 bottles of beer.\nTake one down and pass it around, 89 bottles of beer on the wall.\n89 bottles of beer on the wall, 89 bottles of beer.\nTake one down and pass it around, 88 bottles of beer on the wall.\n88 bottles of beer on the wall, 88 bottles of beer.\nTake one down and pass it around, 87 bottles of beer on the wall.\n87 bottles of beer on the wall, 87 bottles of beer.\nTake one down and pass it around, 86 bottles of beer on the wall.\n86 bottles of beer on the wall, 86 bottles of beer.\nTake one down and pass it around, 85 bottles of beer on the wall.\n85 bottles of beer on the wall, 85 bottles of beer.\nTake one down and pass it around, 84 bottles of beer on the wall.\n84 bottles of beer on the wall, 84 bottles of beer.\nTake one down and pass it around, 83 bottles of beer on the wall.\n83 bottles of beer on the wall, 83 bottles of beer.\nTake one down and pass it around, 82 bottles of beer on the wall.\n82 bottles of beer on the wall, 82 bottles of beer.\nTake one down and pass it around, 81 bottles of beer on the wall.\n81 bottles of beer on the wall, 81 bottles of beer.\nTake one down and pass it around, 80 bottles of beer on the wall.\n80 bottles of beer on the wall, 80 bottles of beer.\nTake one down and pass it around, 79 bottles of beer on the wall.\n79 bottles of beer on the wall, 79 bottles of beer.\nTake one down and pass it around, 78 bottles of beer on the wall.\n78 bottles of beer on the wall, 78 bottles of beer.\nTake one down and pass it around, 77 bottles of beer on the wall.\n77 bottles of beer on the wall, 77 bottles of beer.\nTake one down and pass it around, 76 bottles of beer on the wall.\n76 bottles of beer on the wall, 76 bottles of beer.\nTake one down and pass it around, 75 bottles of beer on the wall.\n75 bottles of beer on the wall, 75 bottles of beer.\nTake one down and pass it around, 74 bottles of beer on the wall.\n74 bottles of beer on the wall, 74 bottles of beer.\nTake one down and pass it around, 73 bottles of beer on the wall.\n73 bottles of beer on the wall, 73 bottles of beer.\nTake one down and pass it around, 72 bottles of beer on the wall.\n72 bottles of beer on the wall, 72 bottles of beer.\nTake one down and pass it around, 71 bottles of beer on the wall.\n71 bottles of beer on the wall, 71 bottles of beer.\nTake one down and pass it around, 70 bottles of beer on the wall.\n70 bottles of beer on the wall, 70 bottles of beer.\nTake one down and pass it around, 69 bottles of beer on the wall.\n69 bottles of beer on the wall, 69 bottles of beer.\nTake one down and pass it around, 68 bottles of beer on the wall.\n68 bottles of beer on the wall, 68 bottles of beer.\nTake one down and pass it around, 67 bottles of beer on the wall.\n67 bottles of beer on the wall, 67 bottles of beer.\nTake one down and pass it around, 66 bottles of beer on the wall.\n66 bottles of beer on the wall, 66 bottles of beer.\nTake one down and pass it around, 65 bottles of beer on the wall.\n65 bottles of beer on the wall, 65 bottles of beer.\nTake one down and pass it around, 64 bottles of beer on the wall.\n64 bottles of beer on the wall, 64 bottles of beer.\nTake one down and pass it around, 63 bottles of beer on the wall.\n63 bottles of beer on the wall, 63 bottles of beer.\nTake one down and pass it around, 62 bottles of beer on the wall.\n62 bottles of beer on the wall, 62 bottles of beer.\nTake one down and pass it around, 61 bottles of beer on the wall.\n61 bottles of beer on the wall, 61 bottles of beer.\nTake one down and pass it around, 60 bottles of beer on the wall.\n60 bottles of beer on the wall, 60 bottles of beer.\nTake one down and pass it around, 59 bottles of beer on the wall.\n59 bottles of beer on the wall, 59 bottles of beer.\nTake one down and pass it around, 58 bottles of beer on the wall.\n58 bottles of beer on the wall, 58 bottles of beer.\nTake one down and pass it around, 57 bottles of beer on the wall.\n57 bottles of beer on the wall, 57 bottles of beer.\nTake one down and pass it around, 56 bottles of beer on the wall.\n56 bottles of beer on the wall, 56 bottles of beer.\nTake one down and pass it around, 55 bottles of beer on the wall.\n55 bottles of beer on the wall, 55 bottles of beer.\nTake one down and pass it around, 54 bottles of beer on the wall.\n54 bottles of beer on the wall, 54 bottles of beer.\nTake one down and pass it around, 53 bottles of beer on the wall.\n53 bottles of beer on the wall, 53 bottles of beer.\nTake one down and pass it around, 52 bottles of beer on the wall.\n52 bottles of beer on the wall, 52 bottles of beer.\nTake one down and pass it around, 51 bottles of beer on the wall.\n51 bottles of beer on the wall, 51 bottles of beer.\nTake one down and pass it around, 50 bottles of beer on the wall.\n50 bottles of beer on the wall, 50 bottles of beer.\nTake one down and pass it around, 49 bottles of beer on the wall.\n49 bottles of beer on the wall, 49 bottles of beer.\nTake one down and pass it around, 48 bottles of beer on the wall.\n48 bottles of beer on the wall, 48 bottles of beer.\nTake one down and pass it around, 47 bottles of beer on the wall.\n47 bottles of beer on the wall, 47 bottles of beer.\nTake one down and pass it around, 46 bottles of beer on the wall.\n46 bottles of beer on the wall, 46 bottles of beer.\nTake one down and pass it around, 45 bottles of beer on the wall.\n45 bottles of beer on the wall, 45 bottles of beer.\nTake one down and pass it around, 44 bottles of beer on the wall.\n44 bottles of beer on the wall, 44 bottles of beer.\nTake one down and pass it around, 43 bottles of beer on the wall.\n43 bottles of beer on the wall, 43 bottles of beer.\nTake one down and pass it around, 42 bottles of beer on the wall.\n42 bottles of beer on the wall, 42 bottles of beer.\nTake one down and pass it around, 41 bottles of beer on the wall.\n41 bottles of beer on the wall, 41 bottles of beer.\nTake one down and pass it around, 40 bottles of beer on the wall.\n40 bottles of beer on the wall, 40 bottles of beer.\nTake one down and pass it around, 39 bottles of beer on the wall.\n39 bottles of beer on the wall, 39 bottles of beer.\nTake one down and pass it around, 38 bottles of beer on the wall.\n38 bottles of beer on the wall, 38 bottles of beer.\nTake one down and pass it around, 37 bottles of beer on the wall.\n37 bottles of beer on the wall, 37 bottles of beer.\nTake one down and pass it around, 36 bottles of beer on the wall.\n36 bottles of beer on the wall, 36 bottles of beer.\nTake one down and pass it around, 35 bottles of beer on the wall.\n35 bottles of beer on the wall, 35 bottles of beer.\nTake one down and pass it around, 34 bottles of beer on the wall.\n34 bottles of beer on the wall, 34 bottles of beer.\nTake one down and pass it around, 33 bottles of beer on the wall.\n33 bottles of beer on the wall, 33 bottles of beer.\nTake one down and pass it around, 32 bottles of beer on the wall.\n32 bottles of beer on the wall, 32 bottles of beer.\nTake one down and pass it around, 31 bottles of beer on the wall.\n31 bottles of beer on the wall, 31 bottles of beer.\nTake one down and pass it around, 30 bottles of beer on the wall.\n30 bottles of beer on the wall, 30 bottles of beer.\nTake one down and pass it around, 29 bottles of beer on the wall.\n29 bottles of beer on the wall, 29 bottles of beer.\nTake one down and pass it around, 28 bottles of beer on the wall.\n28 bottles of beer on the wall, 28 bottles of beer.\nTake one down and pass it around, 27 bottles of beer on the wall.\n27 bottles of beer on the wall, 27 bottles of beer.\nTake one down and pass it around, 26 bottles of beer on the wall.\n26 bottles of beer on the wall, 26 bottles of beer.\nTake one down and pass it around, 25 bottles of beer on the wall.\n25 bottles of beer on the wall, 25 bottles of beer.\nTake one down and pass it around, 24 bottles of beer on the wall.\n24 bottles of beer on the wall, 24 bottles of beer.\nTake one down and pass it around, 23 bottles of beer on the wall.\n23 bottles of beer on the wall, 23 bottles of beer.\nTake one down and pass it around, 22 bottles of beer on the wall.\n22 bottles of beer on the wall, 22 bottles of beer.\nTake one down and pass it around, 21 bottles of beer on the wall.\n21 bottles of beer on the wall, 21 bottles of beer.\nTake one down and pass it around, 20 bottles of beer on the wall.\n20 bottles of beer on the wall, 20 bottles of beer.\nTake one down and pass it around, 19 bottles of beer on the wall.\n19 bottles of beer on the wall, 19 bottles of beer.\nTake one down and pass it around, 18 bottles of beer on the wall.\n18 bottles of beer on the wall, 18 bottles of beer.\nTake one down and pass it around, 17 bottles of beer on the wall.\n17 bottles of beer on the wall, 17 bottles of beer.\nTake one down and pass it around, 16 bottles of beer on the wall.\n16 bottles of beer on the wall, 16 bottles of beer.\nTake one down and pass it around, 15 bottles of beer on the wall.\n15 bottles of beer on the wall, 15 bottles of beer.\nTake one down and pass it around, 14 bottles of beer on the wall.\n14 bottles of beer on the wall, 14 bottles of beer.\nTake one down and pass it around, 13 bottles of beer on the wall.\n13 bottles of beer on the wall, 13 bottles of beer.\nTake one down and pass it around, 12 bottles of beer on the wall.\n12 bottles of beer on the wall, 12 bottles of beer.\nTake one down and pass it around, 11 bottles of beer on the wall.\n11 bottles of beer on the wall, 11 bottles of beer.\nTake one down and pass it around, 10 bottles of beer on the wall.\n10 bottles of beer on the wall, 10 bottles of beer.\nTake one down and pass it around, 9 bottles of beer on the wall.\n9 bottles of beer on the wall, 9 bottles of beer.\nTake one down and pass it around, 8 bottles of beer on the wall.\n8 bottles of beer on the wall, 8 bottles of beer.\nTake one down and pass it around, 7 bottles of beer on the wall.\n7 bottles of beer on the wall, 7 bottles of beer.\nTake one down and pass it around, 6 bottles of beer on the wall.\n6 bottles of beer on the wall, 6 bottles of beer.\nTake one down and pass it around, 5 bottles of beer on the wall.\n5 bottles of beer on the wall, 5 bottles of beer.\nTake one down and pass it around, 4 bottles of beer on the wall.\n4 bottles of beer on the wall, 4 bottles of beer.\nTake one down and pass it around, 3 bottles of beer on the wall.\n3 bottles of beer on the wall, 3 bottles of beer.\nTake one down and pass it around, 2 bottles of beer on the wall.\n2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall."
+    : code == '9'
+    ? '99 bottles of beer on the wall, 99 bottles of beer.\nTake one down and pass it around, 98 bottles of beer on the wall.\n98 bottles of beer on the wall, 98 bottles of beer.\nTake one down and pass it around, 97 bottles of beer on the wall.\n97 bottles of beer on the wall, 97 bottles of beer.\nTake one down and pass it around, 96 bottles of beer on the wall.\n96 bottles of beer on the wall, 96 bottles of beer.\nTake one down and pass it around, 95 bottles of beer on the wall.\n95 bottles of beer on the wall, 95 bottles of beer.\nTake one down and pass it around, 94 bottles of beer on the wall.\n94 bottles of beer on the wall, 94 bottles of beer.\nTake one down and pass it around, 93 bottles of beer on the wall.\n93 bottles of beer on the wall, 93 bottles of beer.\nTake one down and pass it around, 92 bottles of beer on the wall.\n92 bottles of beer on the wall, 92 bottles of beer.\nTake one down and pass it around, 91 bottles of beer on the wall.\n91 bottles of beer on the wall, 91 bottles of beer.\nTake one down and pass it around, 90 bottles of beer on the wall.\n90 bottles of beer on the wall, 90 bottles of beer.\nTake one down and pass it around, 89 bottles of beer on the wall.\n89 bottles of beer on the wall, 89 bottles of beer.\nTake one down and pass it around, 88 bottles of beer on the wall.\n88 bottles of beer on the wall, 88 bottles of beer.\nTake one down and pass it around, 87 bottles of beer on the wall.\n87 bottles of beer on the wall, 87 bottles of beer.\nTake one down and pass it around, 86 bottles of beer on the wall.\n86 bottles of beer on the wall, 86 bottles of beer.\nTake one down and pass it around, 85 bottles of beer on the wall.\n85 bottles of beer on the wall, 85 bottles of beer.\nTake one down and pass it around, 84 bottles of beer on the wall.\n84 bottles of beer on the wall, 84 bottles of beer.\nTake one down and pass it around, 83 bottles of beer on the wall.\n83 bottles of beer on the wall, 83 bottles of beer.\nTake one down and pass it around, 82 bottles of beer on the wall.\n82 bottles of beer on the wall, 82 bottles of beer.\nTake one down and pass it around, 81 bottles of beer on the wall.\n81 bottles of beer on the wall, 81 bottles of beer.\nTake one down and pass it around, 80 bottles of beer on the wall.\n80 bottles of beer on the wall, 80 bottles of beer.\nTake one down and pass it around, 79 bottles of beer on the wall.\n79 bottles of beer on the wall, 79 bottles of beer.\nTake one down and pass it around, 78 bottles of beer on the wall.\n78 bottles of beer on the wall, 78 bottles of beer.\nTake one down and pass it around, 77 bottles of beer on the wall.\n77 bottles of beer on the wall, 77 bottles of beer.\nTake one down and pass it around, 76 bottles of beer on the wall.\n76 bottles of beer on the wall, 76 bottles of beer.\nTake one down and pass it around, 75 bottles of beer on the wall.\n75 bottles of beer on the wall, 75 bottles of beer.\nTake one down and pass it around, 74 bottles of beer on the wall.\n74 bottles of beer on the wall, 74 bottles of beer.\nTake one down and pass it around, 73 bottles of beer on the wall.\n73 bottles of beer on the wall, 73 bottles of beer.\nTake one down and pass it around, 72 bottles of beer on the wall.\n72 bottles of beer on the wall, 72 bottles of beer.\nTake one down and pass it around, 71 bottles of beer on the wall.\n71 bottles of beer on the wall, 71 bottles of beer.\nTake one down and pass it around, 70 bottles of beer on the wall.\n70 bottles of beer on the wall, 70 bottles of beer.\nTake one down and pass it around, 69 bottles of beer on the wall.\n69 bottles of beer on the wall, 69 bottles of beer.\nTake one down and pass it around, 68 bottles of beer on the wall.\n68 bottles of beer on the wall, 68 bottles of beer.\nTake one down and pass it around, 67 bottles of beer on the wall.\n67 bottles of beer on the wall, 67 bottles of beer.\nTake one down and pass it around, 66 bottles of beer on the wall.\n66 bottles of beer on the wall, 66 bottles of beer.\nTake one down and pass it around, 65 bottles of beer on the wall.\n65 bottles of beer on the wall, 65 bottles of beer.\nTake one down and pass it around, 64 bottles of beer on the wall.\n64 bottles of beer on the wall, 64 bottles of beer.\nTake one down and pass it around, 63 bottles of beer on the wall.\n63 bottles of beer on the wall, 63 bottles of beer.\nTake one down and pass it around, 62 bottles of beer on the wall.\n62 bottles of beer on the wall, 62 bottles of beer.\nTake one down and pass it around, 61 bottles of beer on the wall.\n61 bottles of beer on the wall, 61 bottles of beer.\nTake one down and pass it around, 60 bottles of beer on the wall.\n60 bottles of beer on the wall, 60 bottles of beer.\nTake one down and pass it around, 59 bottles of beer on the wall.\n59 bottles of beer on the wall, 59 bottles of beer.\nTake one down and pass it around, 58 bottles of beer on the wall.\n58 bottles of beer on the wall, 58 bottles of beer.\nTake one down and pass it around, 57 bottles of beer on the wall.\n57 bottles of beer on the wall, 57 bottles of beer.\nTake one down and pass it around, 56 bottles of beer on the wall.\n56 bottles of beer on the wall, 56 bottles of beer.\nTake one down and pass it around, 55 bottles of beer on the wall.\n55 bottles of beer on the wall, 55 bottles of beer.\nTake one down and pass it around, 54 bottles of beer on the wall.\n54 bottles of beer on the wall, 54 bottles of beer.\nTake one down and pass it around, 53 bottles of beer on the wall.\n53 bottles of beer on the wall, 53 bottles of beer.\nTake one down and pass it around, 52 bottles of beer on the wall.\n52 bottles of beer on the wall, 52 bottles of beer.\nTake one down and pass it around, 51 bottles of beer on the wall.\n51 bottles of beer on the wall, 51 bottles of beer.\nTake one down and pass it around, 50 bottles of beer on the wall.\n50 bottles of beer on the wall, 50 bottles of beer.\nTake one down and pass it around, 49 bottles of beer on the wall.\n49 bottles of beer on the wall, 49 bottles of beer.\nTake one down and pass it around, 48 bottles of beer on the wall.\n48 bottles of beer on the wall, 48 bottles of beer.\nTake one down and pass it around, 47 bottles of beer on the wall.\n47 bottles of beer on the wall, 47 bottles of beer.\nTake one down and pass it around, 46 bottles of beer on the wall.\n46 bottles of beer on the wall, 46 bottles of beer.\nTake one down and pass it around, 45 bottles of beer on the wall.\n45 bottles of beer on the wall, 45 bottles of beer.\nTake one down and pass it around, 44 bottles of beer on the wall.\n44 bottles of beer on the wall, 44 bottles of beer.\nTake one down and pass it around, 43 bottles of beer on the wall.\n43 bottles of beer on the wall, 43 bottles of beer.\nTake one down and pass it around, 42 bottles of beer on the wall.\n42 bottles of beer on the wall, 42 bottles of beer.\nTake one down and pass it around, 41 bottles of beer on the wall.\n41 bottles of beer on the wall, 41 bottles of beer.\nTake one down and pass it around, 40 bottles of beer on the wall.\n40 bottles of beer on the wall, 40 bottles of beer.\nTake one down and pass it around, 39 bottles of beer on the wall.\n39 bottles of beer on the wall, 39 bottles of beer.\nTake one down and pass it around, 38 bottles of beer on the wall.\n38 bottles of beer on the wall, 38 bottles of beer.\nTake one down and pass it around, 37 bottles of beer on the wall.\n37 bottles of beer on the wall, 37 bottles of beer.\nTake one down and pass it around, 36 bottles of beer on the wall.\n36 bottles of beer on the wall, 36 bottles of beer.\nTake one down and pass it around, 35 bottles of beer on the wall.\n35 bottles of beer on the wall, 35 bottles of beer.\nTake one down and pass it around, 34 bottles of beer on the wall.\n34 bottles of beer on the wall, 34 bottles of beer.\nTake one down and pass it around, 33 bottles of beer on the wall.\n33 bottles of beer on the wall, 33 bottles of beer.\nTake one down and pass it around, 32 bottles of beer on the wall.\n32 bottles of beer on the wall, 32 bottles of beer.\nTake one down and pass it around, 31 bottles of beer on the wall.\n31 bottles of beer on the wall, 31 bottles of beer.\nTake one down and pass it around, 30 bottles of beer on the wall.\n30 bottles of beer on the wall, 30 bottles of beer.\nTake one down and pass it around, 29 bottles of beer on the wall.\n29 bottles of beer on the wall, 29 bottles of beer.\nTake one down and pass it around, 28 bottles of beer on the wall.\n28 bottles of beer on the wall, 28 bottles of beer.\nTake one down and pass it around, 27 bottles of beer on the wall.\n27 bottles of beer on the wall, 27 bottles of beer.\nTake one down and pass it around, 26 bottles of beer on the wall.\n26 bottles of beer on the wall, 26 bottles of beer.\nTake one down and pass it around, 25 bottles of beer on the wall.\n25 bottles of beer on the wall, 25 bottles of beer.\nTake one down and pass it around, 24 bottles of beer on the wall.\n24 bottles of beer on the wall, 24 bottles of beer.\nTake one down and pass it around, 23 bottles of beer on the wall.\n23 bottles of beer on the wall, 23 bottles of beer.\nTake one down and pass it around, 22 bottles of beer on the wall.\n22 bottles of beer on the wall, 22 bottles of beer.\nTake one down and pass it around, 21 bottles of beer on the wall.\n21 bottles of beer on the wall, 21 bottles of beer.\nTake one down and pass it around, 20 bottles of beer on the wall.\n20 bottles of beer on the wall, 20 bottles of beer.\nTake one down and pass it around, 19 bottles of beer on the wall.\n19 bottles of beer on the wall, 19 bottles of beer.\nTake one down and pass it around, 18 bottles of beer on the wall.\n18 bottles of beer on the wall, 18 bottles of beer.\nTake one down and pass it around, 17 bottles of beer on the wall.\n17 bottles of beer on the wall, 17 bottles of beer.\nTake one down and pass it around, 16 bottles of beer on the wall.\n16 bottles of beer on the wall, 16 bottles of beer.\nTake one down and pass it around, 15 bottles of beer on the wall.\n15 bottles of beer on the wall, 15 bottles of beer.\nTake one down and pass it around, 14 bottles of beer on the wall.\n14 bottles of beer on the wall, 14 bottles of beer.\nTake one down and pass it around, 13 bottles of beer on the wall.\n13 bottles of beer on the wall, 13 bottles of beer.\nTake one down and pass it around, 12 bottles of beer on the wall.\n12 bottles of beer on the wall, 12 bottles of beer.\nTake one down and pass it around, 11 bottles of beer on the wall.\n11 bottles of beer on the wall, 11 bottles of beer.\nTake one down and pass it around, 10 bottles of beer on the wall.\n10 bottles of beer on the wall, 10 bottles of beer.\nTake one down and pass it around, 9 bottles of beer on the wall.\n9 bottles of beer on the wall, 9 bottles of beer.\nTake one down and pass it around, 8 bottles of beer on the wall.\n8 bottles of beer on the wall, 8 bottles of beer.\nTake one down and pass it around, 7 bottles of beer on the wall.\n7 bottles of beer on the wall, 7 bottles of beer.\nTake one down and pass it around, 6 bottles of beer on the wall.\n6 bottles of beer on the wall, 6 bottles of beer.\nTake one down and pass it around, 5 bottles of beer on the wall.\n5 bottles of beer on the wall, 5 bottles of beer.\nTake one down and pass it around, 4 bottles of beer on the wall.\n4 bottles of beer on the wall, 4 bottles of beer.\nTake one down and pass it around, 3 bottles of beer on the wall.\n3 bottles of beer on the wall, 3 bottles of beer.\nTake one down and pass it around, 2 bottles of beer on the wall.\n2 bottles of beer on the wall, 2 bottles of beer.\nTake one down and pass it around, 1 bottle of beer on the wall.\n1 bottle of beer on the wall, 1 bottle of beer.\nTake one down and pass it around, no more bottles of beer on the wall.\nNo more bottles of beer on the wall, no more bottles of beer.\nGo to the store and buy some more, 99 bottles of beer on the wall.'
     : undefined;
 }
 
@@ -1918,8 +1918,8 @@ function friend(friends) {
 // Write a function that merges two sorted arrays into a single one. The arrays only contain integers. Also, the final outcome must be sorted and not have any duplicate.
 
 function mergeArrays(a, b) {
-  return ([a] + "," + [b])
-    .split(",")
+  return ([a] + ',' + [b])
+    .split(',')
     .filter((n) => n)
     .sort((a, b) => a - b)
     .map((x) => Number(x))
@@ -1967,12 +1967,12 @@ function mergeArrays(arr1, arr2) {
 // Good luck :)
 
 function unusualFive() {
-  return ["a", "a", "a", "a", "a"].length;
+  return ['a', 'a', 'a', 'a', 'a'].length;
 }
 
 // Make a function that returns the value multiplied by 50 and increased by 6. If the value entered is a string it should return "Error".
 
-let problem = (x) => (typeof x == "number" ? x * 50 + 6 : "Error");
+let problem = (x) => (typeof x == 'number' ? x * 50 + 6 : 'Error');
 
 // Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
 
@@ -1993,10 +1993,10 @@ let problem = (x) => (typeof x == "number" ? x * 50 + 6 : "Error");
 // Output: "Pls go away and stop eating my sheep"
 
 function warnTheSheep(queue) {
-  let i = queue.reverse().indexOf("wolf");
+  let i = queue.reverse().indexOf('wolf');
   return i > 0
     ? `Oi! Sheep number ${i}! You are about to be eaten by a wolf!`
-    : "Pls go away and stop eating my sheep";
+    : 'Pls go away and stop eating my sheep';
 }
 
 //   The male gametes or sperm cells in humans and other mammals are heterogametic and contain one of two types of sex chromosomes. They are either X or Y. The female gametes or eggs however, contain only the X sex chromosome and are homogametic.
@@ -2008,7 +2008,7 @@ function warnTheSheep(queue) {
 // If the sperm contains the X chromosome, return "Congratulations! You're going to have a daughter."; If the sperm contains the Y chromosome, return "Congratulations! You're going to have a son.";
 
 function chromosomeCheck(sperm) {
-  return sperm.includes("Y")
+  return sperm.includes('Y')
     ? "Congratulations! You're going to have a son."
     : "Congratulations! You're going to have a daughter.";
 }
@@ -2027,7 +2027,7 @@ function chromosomeCheck(sperm) {
 // toBinary(5)  /* should return 101 */
 // toBinary(11) /* should return 1011 */
 
-let toBinary = n => +n.toString(2)
+let toBinary = (n) => +n.toString(2);
 
 // Given an array add all the number elements and return the binary equivalent of that sum; to make the code bullet proof anything else than a number should be addeded as 0 since it can't be addeded.
 
@@ -2041,8 +2041,10 @@ let toBinary = n => +n.toString(2)
 
 // This is a modification on the Kata: Array2Binary addition hope you like it
 
-function arr2bin(arr){
-  return arr.reduce((sum,num) =>  sum + (typeof num == "number" ?  num : 0) , 0).toString(2)
+function arr2bin(arr) {
+  return arr
+    .reduce((sum, num) => sum + (typeof num == 'number' ? num : 0), 0)
+    .toString(2);
 }
 
 // The wide-mouth frog is particularly interested in the eating habits of other creatures.
@@ -2054,24 +2056,26 @@ function arr2bin(arr){
 // Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide.
 
 function mouthSize(animal) {
-  return animal.toLowerCase() == "alligator" ? "small" : "wide"
+  return animal.toLowerCase() == 'alligator' ? 'small' : 'wide';
 }
 
 // For every good kata idea there seem to be quite a few bad ones!
 
 // In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
 
-function well(x){
-  let goods = []
+function well(x) {
+  let goods = [];
   for (let y of x) {
-    if (y == "good") {
-      goods.push(y)
-    } 
+    if (y == 'good') {
+      goods.push(y);
+    }
   }
-  return goods.length > 2 ? "I smell a series!"
-    : goods.length > 0 ? "Publish!"
-    : "Fail!"
-  }
+  return goods.length > 2
+    ? 'I smell a series!'
+    : goods.length > 0
+    ? 'Publish!'
+    : 'Fail!';
+}
 
 //   The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the savings over the normal high street price would effectively cover the cost of your holiday.
 
@@ -2083,6 +2087,16 @@ function well(x){
 
 // All inputs will be integers. Please return an integer. Round down.
 
-function dutyFree(normPrice, discount, hol){
-  return Math.floor(hol / (normPrice * (discount/100)))
-  }
+function dutyFree(normPrice, discount, hol) {
+  return Math.floor(hol / (normPrice * (discount / 100)));
+}
+
+// Create a function called _if which takes 3 arguments: a value bool and 2 functions (which do not take any parameters): func1 and func2
+
+// When bool is truthy, func1 should be called, otherwise call the func2.
+// Example:
+
+// _if(true, function(){console.log("True")}, function(){console.log("false")})
+// // Logs 'True' to the console.
+
+let _if = (bool, func1, func2) => (bool ? func1() : func2());
