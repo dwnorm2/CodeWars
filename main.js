@@ -2360,3 +2360,9 @@ function hello(name) {
     name ? name[0].toUpperCase() + name.slice(1).toLowerCase() : 'World'
   }!`;
 }
+
+// Complete the function which converts hex number (given as a string) to a decimal number.
+
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
