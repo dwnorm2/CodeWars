@@ -2566,3 +2566,17 @@ function printerError(s) {
   let filtered = s.split("").filter((char) => errors.includes(char));
   return `${filtered.length}/${s.length}`;
 }
+
+// Description:
+
+// Replace all vowel to exclamation mark in the sentence. aeiouAEIOU is vowel.
+// Examples
+
+// replace("Hi!") === "H!!"
+// replace("!Hi! Hi!") === "!H!! H!!"
+// replace("aeiou") === "!!!!!"
+// replace("ABCDE") === "!BCD!"
+
+function replace(s) {
+  return s.replaceAll(/a|e|i|o|u/gi, "!");
+}
