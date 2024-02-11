@@ -3673,7 +3673,7 @@ function factorial(n) {
 var capitals = function (word) {
   return word
     .split("")
-    .map((x, i, arr) => {
+    .map((x, i) => {
       if (x == x.toUpperCase()) {
         return i;
       }
