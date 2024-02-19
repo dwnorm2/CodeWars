@@ -3813,3 +3813,26 @@ function maxMultiple(divisor, bound) {
 // All values in the array will be integers. Return the good values in the order they are given.
 
 let noOdds = (values) => values.filter((x) => x % 2 == 0);
+
+// Given a string, capitalize the letters that occupy even indexes and odd indexes separately, and return as shown below. Index 0 will be considered even.
+
+// For example, capitalize("abcdef") = ['AbCdEf', 'aBcDeF']. See test cases for more examples.
+
+// The input will be a lowercase string with no spaces.
+
+function capitalize(s) {
+  return [
+    s
+      .split("")
+      .map(function (x, i) {
+        return i % 2 == 0 ? x.toUpperCase() : x.toLowerCase();
+      })
+      .join(""),
+    s
+      .split("")
+      .map(function (x, i) {
+        return i % 2 !== 0 ? x.toUpperCase() : x.toLowerCase();
+      })
+      .join(""),
+  ];
+}
