@@ -3825,13 +3825,13 @@ function capitalize(s) {
     s
       .split("")
       .map(function (x, i) {
-        return i % 2 == 0 ? x.toUpperCase() : x.toLowerCase();
+        return i % 2 == 0 ? x.toUpperCase() : x;
       })
       .join(""),
     s
       .split("")
       .map(function (x, i) {
-        return i % 2 !== 0 ? x.toUpperCase() : x.toLowerCase();
+        return i % 2 !== 0 ? x.toUpperCase() : x;
       })
       .join(""),
   ];
