@@ -3857,7 +3857,9 @@ function solve(s) {
     l == l.toUpperCase() ? upperCount++ : lowerCount++;
   }
 
-  return upperCount > lowerCount
-    ? arr.map((l) => l.toUpperCase()).join("")
-    : arr.map((l) => l.toLowerCase()).join("");
+  return (
+    upperCount > lowerCount
+      ? arr.map((l) => l.toUpperCase())
+      : arr.map((l) => l.toLowerCase())
+  ).join("");
 }
