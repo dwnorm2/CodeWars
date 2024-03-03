@@ -3998,150 +3998,15 @@ function checkExam(array1, array2) {
   return score > 0 ? score : 0;
 }
 
-// Determine the total number of digits in the integer (n>=0) given as input to the function. For example, 9 is a single digit, 66 has 2 digits and 128685 has 6 digits. Be careful to avoid overflows/underflows.
+// Your task is to write function factorial.
 
-// All inputs will be valid.
+// https://en.wikipedia.org/wiki/Factorial
 
-function digits(n) {
-  return n.toString().length;
-}
-
-// Challenge:
-
-// Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
-
-// Example:
-
-// Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
-
-// Addendum:
-
-// Please, keep in mind, that JavaScript is by default sorting objects alphabetically. For more information, please consult:
-
-// http://stackoverflow.com/questions/6093874/why-doesnt-the-sort-function-of-javascript-work-well
-
-function flattenAndSort(array) {
-  let arr = [];
-  for (let arrays of array) {
-    for (let num of arrays) {
-      arr.push(num);
-    }
+function factorial(n) {
+  let x = 1;
+  for (n; n > 0; n--) {
+    x *= n;
+    console.log(n);
   }
-  return arr.sort((a, b) => a - b);
-}
-
-function flattenAndSort(array) {
-  return array.flat().sort((a, b) => a - b);
-}
-
-// Create a function that returns the name of the winner in a fight between two fighters.
-
-// Each fighter takes turns attacking the other and whoever kills the other first is victorious. Death is defined as having health <= 0.
-
-// Each fighter will be a Fighter object/instance. See the Fighter class below in your chosen language.
-
-// Both health and damagePerAttack (damage_per_attack for python) will be integers larger than 0. You can mutate the Fighter objects.
-
-// Your function also receives a third argument, a string, with the name of the fighter that attacks first.
-// Example:
-
-//   declare_winner(Fighter("Lew", 10, 2), Fighter("Harry", 5, 4), "Lew") => "Lew"
-
-//   Lew attacks Harry; Harry now has 3 health.
-//   Harry attacks Lew; Lew now has 6 health.
-//   Lew attacks Harry; Harry now has 1 health.
-//   Harry attacks Lew; Lew now has 2 health.
-//   Lew attacks Harry: Harry now has -1 health and is dead. Lew wins.
-
-// function Fighter(name, health, damagePerAttack) {
-//         this.name = name;
-//         this.health = health;
-//         this.damagePerAttack = damagePerAttack;
-//         this.toString = function() { return this.name; }
-// }
-
-function declareWinner(fighter1, fighter2, firstAttacker) {
-  while (fighter1.health > 0 && fighter2.health > 0) {
-    if (firstAttacker == fighter1.name) {
-      fighter2.health -= fighter1.damagePerAttack;
-      if (fighter2.health <= 0) {
-        break;
-      }
-      fighter1.health -= fighter2.damagePerAttack;
-    } else if (firstAttacker == fighter2.name) {
-      fighter1.health -= fighter2.damagePerAttack;
-      if (fighter1.health <= 0) {
-        break;
-      }
-      fighter2.health -= fighter1.damagePerAttack;
-    }
-  }
-  return fighter1.health <= 0 ? fighter2.name : fighter1.name;
-}
-
-// JavaScript Arrays support a filter function (starting in JavaScript 1.6). Use the filter functionality to complete the function given.
-
-// The solution would work like the following:
-
-// getEvenNumbers([2,4,5,6]) // should == [2,4,6]
-
-function getEvenNumbers(numbersArray) {
-  return numbersArray.filter((n) => n % 2 == 0);
-}
-
-// Task
-
-// Given a list of digits, return the smallest number that could be formed from these digits, using the digits only once (ignore duplicates).
-// Notes:
-
-//     Only positive integers will be passed to the function (> 0 ), no negatives or zeros.
-//     Input >> Output Examples
-
-// minValue ({1, 3, 1})  ==> return (13)
-
-// Explanation:
-
-// (13) is the minimum number could be formed from {1, 3, 1} , Without duplications
-
-// minValue({5, 7, 5, 9, 7})  ==> return (579)
-
-// Explanation:
-
-// (579) is the minimum number could be formed from {5, 7, 5, 9, 7} , Without duplications
-
-// minValue({1, 9, 3, 1, 7, 4, 6, 6, 7}) return  ==> (134679)
-
-// Explanation:
-
-// (134679) is the minimum number could be formed from {1, 9, 3, 1, 7, 4, 6, 6, 7} , Without duplications
-
-function minValue(values) {
-  return +values
-    .filter((x, i, arr) => arr.indexOf(x) == i)
-    .sort((a, b) => a - b)
-    .join("");
-}
-
-// Return an array containing the numbers from 1 to N, where N is the parametered value.
-
-// Replace certain values however if any of the following conditions are met:
-
-//     If the value is a multiple of 3: use the value "Fizz" instead
-//     If the value is a multiple of 5: use the value "Buzz" instead
-//     If the value is a multiple of 3 & 5: use the value "FizzBuzz" instead
-
-// N will never be less than 1.
-
-// Method calling example:
-
-// fizzbuzz(3) -->  [1, 2, "Fizz"]
-
-function fizzbuzz(n) {
-  let arr = [];
-  for (let i = 1; i <= n; i++) {
-    arr.push(i);
-  }
-  return arr.map((n) =>
-    n % 15 == 0 ? "FizzBuzz" : n % 5 == 0 ? "Buzz" : n % 3 == 0 ? "Fizz" : n
-  );
+  return x;
 }
