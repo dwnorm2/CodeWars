@@ -4246,11 +4246,11 @@ function rowWeights(array) {
 // Some random tests might fail due to a bug in the JavaScript implementation. Simply resubmit if that happens to you.
 
 function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
-  let ages = [age1, age2, age3, age4, age5, age6, age7, age8];
-
   return Math.floor(
     Math.sqrt(
-      ages.map((age) => Math.pow(age, 2)).reduce((acc, age) => acc + age, 0)
+      [...arguments]
+        .map((age) => Math.pow(age, 2))
+        .reduce((acc, age) => acc + age, 0)
     ) / 2
   );
 }
