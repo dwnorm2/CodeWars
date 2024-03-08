@@ -4263,7 +4263,5 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
 // "JACK"  --> "Hello Jack!"
 
 var greet = function (name) {
-  return `Hello ${name.slice(0, 1).toUpperCase()}${name
-    .slice(1, name.length)
-    .toLowerCase()}!`;
+  return `Hello ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!`;
 };
