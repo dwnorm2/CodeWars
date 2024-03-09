@@ -4265,3 +4265,50 @@ function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
 var greet = function (name) {
   return `Hello ${name[0].toUpperCase()}${name.slice(1).toLowerCase()}!`;
 };
+
+// We want to generate a function that computes the series starting from 0 and ending until the given number.
+// Example:
+
+// Input:
+
+// > 6
+
+// Output:
+
+//     0+1+2+3+4+5+6 = 21
+
+// Input:
+
+// > -15
+
+// Output:
+
+//     -15<0
+
+// Input:
+
+// > 0
+
+// Output:
+
+//     0=0
+
+var SequenceSum = (function () {
+  function SequenceSum() {}
+
+  SequenceSum.showSequence = function (count) {
+    let sum = 0;
+    let string = "";
+    for (let i = 0; i <= count; i++) {
+      sum += i;
+      string += `${i}+`;
+    }
+    return count == 0
+      ? "0=0"
+      : count < 0
+      ? `${count}<0`
+      : `${string.slice(0, -1)} = ${sum}`;
+  };
+
+  return SequenceSum;
+})();
