@@ -4361,13 +4361,29 @@ function include(arr, item) {
 
 // Oh no, Timmy's created an infinite loop! Help Timmy find and fix the bug in his unfinished for loop!
 
-function createArray(number){
+function createArray(number) {
   var newArray = [];
-  
-  for(var counter = 1; counter <= number;){
+
+  for (var counter = 1; counter <= number; ) {
     newArray.push(counter);
-    counter++
+    counter++;
   }
-  
+
   return newArray;
+}
+
+// Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+// Hint for R users:
+
+//     The length of string is not always the same as the number of characters
+
+// For example: (Input1, Input2) --> output
+
+// ("1", "22") --> "1221"
+// ("22", "1") --> "1221"
+
+function solution(a, b) {
+  let arr = [a, b].sort((a, b) => a.length - b.length);
+  return arr[0] + arr[1] + arr[0];
 }
