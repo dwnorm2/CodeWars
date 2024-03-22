@@ -4578,3 +4578,17 @@ function animal(obj) {
 function multipleOfIndex(array) {
   return array.filter((n, i) => n % i == 0 || n == 0);
 }
+
+// The code provided is supposed replace all the dots . in the specified String str with dashes -
+
+// But it's not working properly.
+// Task
+
+// Fix the bug so we can all go home early.
+// Notes
+
+// String str will never be null.
+
+var replaceDots = function(str) {
+  return str.replaceAll('.', '-');
+}
