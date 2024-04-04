@@ -4857,7 +4857,5 @@ function whatday(num) {
     "Friday",
     "Saturday",
   ];
-  return num < 1 || num > 7
-    ? "Wrong, please enter a number between 1 and 7"
-    : days[num - 1];
+  return days[num - 1] || "Wrong, please enter a number between 1 and 7";
 }
