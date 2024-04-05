@@ -4859,3 +4859,12 @@ function whatday(num) {
   ];
   return days[num - 1] || "Wrong, please enter a number between 1 and 7";
 }
+
+// Add the value "codewars" to the websites array.
+// After your code executes the websites array should == ["codewars"]
+
+// The websites array has already been defined for you using the following code:
+
+// var websites = [];
+
+websites.push("codewars");
