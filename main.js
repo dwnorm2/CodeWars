@@ -4969,3 +4969,15 @@ function usdcny(usd) {
 // 'James Stevens'
 
 let combineNames = (n1, n2) => `${n1} ${n2}`;
+
+// Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. Return the result rounded to two decimals.
+
+// Graph
+
+// Note: use the π value provided in your language (Math::PI, M_PI, math.pi, etc)
+
+function squareArea(A) {
+  let c = A * 4;
+  let r = c / (2 * Math.PI);
+  return r ** 2;
+}
