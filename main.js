@@ -5068,3 +5068,7 @@ function stairsIn20(s) {
   }
   return totalStairs * 20;
 }
+
+function stairsIn20(s) {
+  return s.flat().reduce((total, s) => total + s, 0) * 20;
+}
