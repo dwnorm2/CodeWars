@@ -5089,3 +5089,7 @@ let multiply = (number) => {
       : 5 ** (number.toString().length - 1))
   );
 };
+
+let multiply = (number) => {
+  return number * 5 ** Math.abs(number).toString().length;
+};
