@@ -5171,3 +5171,8 @@ function twoOldestAges(ages) {
   let sorted = ages.sort((a, b) => a - b);
   return [sorted[sorted.length - 2], sorted[sorted.length - 1]];
 }
+
+function twoOldestAges(ages) {
+  let sorted = ages.sort((a, b) => a - b);
+  return sorted.slice(-2);
+}
