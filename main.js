@@ -5233,8 +5233,7 @@ function typeOfSum(a, b) {
 
 // This method, which is supposed to return the result of dividing its first argument by its second, isn't always returning correct values. Fix it.
 
-const solve = (x, y) => x/y
-
+const solve = (x, y) => x / y;
 
 // Many programming languages provide the functionality of converting a string to uppercase or lowercase. For example, upcase/downcase in Ruby, upper/lower in Python, and toUpperCase/toLowerCase in Java/JavaScript, uppercase/lowercase in Kotlin. Typically, these methods won't change the size of the string.
 
@@ -5248,7 +5247,7 @@ const solve = (x, y) => x/y
 
 // Note: Meta programming is not allowed in this kata. So, the size of your solution is limited.
 
-const STRANGE_STRING = "ß"
+const STRANGE_STRING = "ß";
 
 // Given a point in a Euclidean plane (x and y), return the quadrant the point exists in: 1, 2, 3 or 4 (integer). x and y are non-zero integers, therefore the given point never lies on the axes.
 // Examples
@@ -5261,13 +5260,13 @@ const STRANGE_STRING = "ß"
 
 function quadrant(x, y) {
   if (x > 0 && y > 0) {
-    return 1
+    return 1;
   } else if (x < 0 && y > 0) {
-    return 2
+    return 2;
   } else if (x < 0 && y < 0) {
-    return 3
+    return 3;
   } else if (x > 0 && y < 0) {
-    return 4
+    return 4;
   }
 }
 
@@ -5285,11 +5284,11 @@ function quadrant(x, y) {
 
 // Examples:
 
-function elevator(left, right, call){
+function elevator(left, right, call) {
   if (Math.abs(call - left) < Math.abs(call - right)) {
-    return "left"
+    return "left";
   } else {
-    return "right"
+    return "right";
   }
 }
 
@@ -5299,7 +5298,7 @@ function elevator(left, right, call){
 //     !a == false
 //     a == !a
 
-const a = "0"
+const a = "0";
 
 // When it's spring Japanese cherries blossom, it's called "sakura" and it's admired a lot. The petals start to fall in late April.
 
@@ -5315,7 +5314,7 @@ const a = "0"
 
 function sakuraFall(v) {
   //branch is 400cm high
-  return v > 0 ? 400 / v : 0
+  return v > 0 ? 400 / v : 0;
 }
 
 // Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
@@ -5327,7 +5326,10 @@ function sakuraFall(v) {
 // Get your timer out. Are you ready? Ready, get set, GO!!!
 
 function arrayMadness(a, b) {
-  return a.reduce((total,x) => total + x**2, 0) > b.reduce((total,y) => total + y**3, 0)
+  return (
+    a.reduce((total, x) => total + x ** 2, 0) >
+    b.reduce((total, y) => total + y ** 3, 0)
+  );
 }
 
 // *** No Loops Allowed ***
@@ -5338,6 +5340,17 @@ function arrayMadness(a, b) {
 
 // Looking for more, loop-restrained fun? Check out the other kata in the series:
 
-function check(a,x){
-  return a.includes(x)
-};
+function check(a, x) {
+  return a.includes(x);
+}
+
+// At the annual family gathering, the family likes to find the oldest living family member’s age and the youngest family member’s age and calculate the difference between them.
+
+// You will be given an array of all the family members' ages, in any order. The ages will be given in whole numbers, so a baby of 5 months, will have an ascribed ‘age’ of 0. Return a new array (a tuple in Python) with [youngest age, oldest age, difference between the youngest and oldest age].
+
+function differenceInAges(ages) {
+  ages.sort((a, b) => a - b);
+  let oldest = ages[ages.length - 1];
+  let youngest = ages[0];
+  return [youngest, oldest, oldest - youngest];
+}
