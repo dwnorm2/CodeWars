@@ -5354,3 +5354,9 @@ function differenceInAges(ages) {
   let youngest = ages[0];
   return [youngest, oldest, oldest - youngest];
 }
+
+function differenceInAges(ages) {
+  let oldest = Math.max(...ages);
+  let youngest = Math.min(...ages);
+  return [youngest, oldest, oldest - youngest];
+}
