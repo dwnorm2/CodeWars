@@ -5360,3 +5360,20 @@ function differenceInAges(ages) {
   let youngest = Math.min(...ages);
   return [youngest, oldest, oldest - youngest];
 }
+
+// Remove all exclamation marks from the end of sentence.
+// Examples
+
+// "Hi!"     ---> "Hi"
+// "Hi!!!"   ---> "Hi"
+// "!Hi"     ---> "!Hi"
+// "!Hi!"    ---> "!Hi"
+// "Hi! Hi!" ---> "Hi! Hi"
+// "Hi"      ---> "Hi"
+
+function remove(string) {
+  while (string.endsWith("!")) {
+    string = string.substring(0, string.length - 1);
+  }
+  return string;
+}
