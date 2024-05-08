@@ -5474,3 +5474,7 @@ function trueOrFalse(val) {
     return "true";
   }
 }
+
+function trueOrFalse(val) {
+  return Boolean(val).toString();
+}
