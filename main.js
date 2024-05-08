@@ -5460,3 +5460,17 @@ function shortenToDate(longDate) {
 // There is an object/class already created called MrFreeze. Mark this object as frozen so that no other changes can be made to it.
 
 Object.freeze(MrFreeze);
+
+// Coding in function trueOrFalse, function accept 1 parameters:val, try to use the conditional statement if...else, if val value is false (val==false or it can convert to false), should return a string "false", if not, return a string "true".
+
+// When you have finished the work, click "Run Tests" to see if your code is working properly.
+
+// In the end, click "Submit" to submit your code pass this kata.
+
+function trueOrFalse(val) {
+  if (val == !true || val == undefined) {
+    return "false";
+  } else {
+    return "true";
+  }
+}
