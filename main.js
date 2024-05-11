@@ -5494,4 +5494,31 @@ function remove(string) {
   return string + "!";
 }
 
-// code oss test
+// Hey awesome programmer!
+
+// You've got much data to manage and of course you use zero-based and non-negative ID's to make each data item unique!
+
+// Therefore you need a method, which returns the smallest unused ID for your next new data item...
+
+// Note: The given array of used IDs may be unsorted. For test reasons there may be duplicate IDs, but you don't have to find or remove them!
+
+// Go on and code some pure awesomeness!
+
+function nextId(ids) {
+  let num = 0;
+  let final = ids.sort((a, b) => a - b).filter((x, i, arr) => x !== arr[i - 1]);
+  for (let i = 0; i <= final.length; i++) {
+    if (final[i] == i) {
+      num += 1;
+    }
+  }
+  return num;
+}
+
+function nextId(ids) {
+  let num = 0;
+  while (ids.includes(num)) {
+    num++;
+  }
+  return num;
+}
