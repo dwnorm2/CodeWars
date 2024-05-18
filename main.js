@@ -5635,3 +5635,5 @@ function getNumberFromString(s) {
       .join("")
   );
 }
+
+//test
