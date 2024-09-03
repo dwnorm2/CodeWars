@@ -294,15 +294,14 @@ function descendingOrder(n) {
 // "This is another test" --> "This is rehtona test"
 
 function spinWords(string) {
-  function toReverse(x) {
-    if (x.length >= 5) {
-      return x.split("").reverse().join("");
-    }
-    return x;
-  }
   return string
     .split(" ")
-    .map((x) => toReverse(x))
+    .map(function (x) {
+      if (x.length >= 5) {
+        return x.split("").reverse().join("");
+      }
+      return x;
+    })
     .join(" ");
 }
 //test
