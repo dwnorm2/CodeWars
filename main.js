@@ -5637,3 +5637,4 @@ function getNumberFromString(s) {
 }
 
 //test
+//thinkpad sway test
