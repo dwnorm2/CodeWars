@@ -59,3 +59,40 @@ function solution(number) {
         .filter((x) => x % 3 == 0 || x % 5 == 0)
         .reduce((acc, x) => acc + x, 0);
 }
+
+// Return the number (count) of vowels in the given string.
+
+// We will consider a, e, i, o, u as vowels for this Kata (but not y).
+
+// The input string will only consist of lower case letters and/or spaces.
+
+function getCount(str) {
+  let vowels = ["a", "e", "i", "o", "u"];
+  return str.split("").filter((x) => vowels.includes(x)).length;
+}
+
+// Trolls are attacking your comment section!
+
+// A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat.
+
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
+
+// For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+
+// Note: for this kata y isn't considered a vowel.
+
+function disemvowel(str) {
+  let arr = ["a", "e", "i", "o", "u"];
+  return str
+    .split("")
+    .filter((x) => !arr.includes(x.toLowerCase()))
+    .join("");
+}
+
+function disemvowel(str) {
+  let vowels = "aeiou";
+  return str
+    .split("")
+    .filter((x) => !vowels.includes(x.toLowerCase()))
+    .join("");
+}
