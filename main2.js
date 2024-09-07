@@ -42,3 +42,20 @@ function solution(number) {
   }
   return final;
 }
+
+function solution(number) {
+  return number < 0
+    ? 0
+    : [...new Array(number).keys()].reduce(
+        (acc, x) => (x % 3 == 0 || x % 5 == 0 ? (acc += x) : (acc += 0)),
+        0
+      );
+}
+
+function solution(number) {
+  return number < 0
+    ? 0
+    : [...new Array(number).keys()]
+        .filter((x) => x % 3 == 0 || x % 5 == 0)
+        .reduce((acc, x) => acc + x, 0);
+}
