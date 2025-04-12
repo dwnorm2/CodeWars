@@ -14,3 +14,14 @@ def even_or_odd(number)
   end
    return "Odd"
 end
+
+def even_or_odd(number)
+  if number.even?
+    return "Even"
+  end
+  return "Odd"
+end
+
+def even_or_odd(number)
+  return number.even? ? "Even": "Odd"
+end
