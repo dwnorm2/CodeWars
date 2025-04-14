@@ -112,3 +112,21 @@ end
 def remove_char(s)
   s[1...-1]
 end
+
+# Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+def square_sum(numbers)
+  sum = 0
+  numbers.each do |number|
+    sum += number ** 2
+  end
+  sum
+end
+
+def square_sum(numbers)
+  numbers.reduce(0) { |sum, num| sum + num**2}
+end
+
+def square_sum(numbers)
+  numbers.sum {|num| num**2}
+end
