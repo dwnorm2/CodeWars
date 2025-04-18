@@ -222,3 +222,7 @@ end
 def no_space(x)
   x.split.join
 end
+
+def no_space(x)
+  x.delete(" ")
+end
