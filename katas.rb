@@ -206,3 +206,7 @@ end
 def countSheeps array
   array.select {|sheep|sheep}.length
 end
+
+def countSheeps array
+  array.count(true)
+end
