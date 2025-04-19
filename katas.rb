@@ -240,3 +240,7 @@ end
 def boolean_to_string(b)
   "#{b}"
 end
+
+def boolean_to_string(b)
+  b.to_s
+end
