@@ -226,3 +226,17 @@ end
 def no_space(x)
   x.delete(" ")
 end
+
+# Code as fast as you can! You need to double the integer and return it.
+
+def double_integer(i)
+  i*2
+end
+
+# Implement a function which convert the given boolean value into its string representation.
+
+# Note: Only valid inputs will be given.
+
+def boolean_to_string(b)
+  "#{b}"
+end
