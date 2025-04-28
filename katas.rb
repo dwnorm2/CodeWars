@@ -428,3 +428,20 @@ end
 def simple_multiplication(number)
   number % 2 == 0 ? number*8 : number*9
 end
+
+# Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+# The output should be two capital letters with a dot separating them.
+
+# It should look like this:
+
+# Sam Harris => S.H
+
+# patrick feeney => P.F
+
+def abbrev_name(name)
+  first_name = name.split(" ")[0]
+  last_name = name.split(" ")[1]
+  
+  "#{first_name[0].upcase}.#{last_name[0].upcase}"
+end
