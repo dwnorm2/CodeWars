@@ -473,3 +473,11 @@ end
 def invert(list)
   list.map{|n| n*-1}
 end
+
+# Write a function which calculates the average of the numbers in a given array.
+
+# Note: Empty arrays should return 0.
+
+def average(array)
+  array.sum > 0 ? array.sum.to_f/array.length : 0
+ end
