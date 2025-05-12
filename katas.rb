@@ -571,3 +571,5 @@ end
 def zero_fuel(distance, mpg, fuel_left)
   distance/mpg.to_f <= fuel_left
 end
+
+# test
