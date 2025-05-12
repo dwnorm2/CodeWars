@@ -480,7 +480,7 @@ end
 
 def average(array)
   array.sum > 0 ? array.sum.to_f/array.length : 0
- end
+end
 
 def average(array)
   array.empty? ? 0 : array.sum.to_f / array.length
