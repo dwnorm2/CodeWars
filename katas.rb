@@ -586,3 +586,12 @@ end
 def correct(string)
   string.gsub("0", "O").gsub("1", "I").gsub("5", "S")
 end
+
+# Complete the solution so that it reverses the string passed into it.
+
+# 'world'  =>  'dlrow'
+# 'word'   =>  'drow'
+
+def solution(str)
+  str.reverse
+end
